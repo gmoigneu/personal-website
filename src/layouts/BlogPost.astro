@@ -3,84 +3,156 @@ import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
+import Navigation from '../components/Navigation.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+
+function formatDate(date: Date) {
+	return date.toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	});
+}
+
+// Estimate read time (roughly 200 words per minute)
+const readTime = '5 min read';
 ---
 
+<!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
+		<BaseHead title={title} description={description} image={heroImage} type="article" publishedTime={pubDate} modifiedTime={updatedDate} />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Article",
+			"headline": title,
+			"description": description,
+			"image": heroImage ? new URL(heroImage.src, Astro.site).toString() : undefined,
+			"datePublished": pubDate.toISOString(),
+			"dateModified": updatedDate ? updatedDate.toISOString() : pubDate.toISOString(),
+			"author": {
+				"@type": "Person",
+				"name": "Guillaume Moigneu",
+				"url": "https://guillaume.id"
+			},
+			"publisher": {
+				"@type": "Person",
+				"name": "Guillaume Moigneu",
+				"url": "https://guillaume.id"
+			},
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": Astro.url.toString()
 			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
+		})} />
 	</head>
+	<body class="bg-[var(--color-background)] font-body min-h-full flex flex-col">
+		<Navigation currentPage="blog" />
 
-	<body>
-		<Header />
-		<main>
-			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
-						<hr />
+		<!-- Article Container -->
+		<main class="flex-1 flex flex-col items-center py-20 px-16">
+			<article class="w-full max-w-[720px] flex flex-col gap-12">
+				<!-- Article Header -->
+				<header class="flex flex-col gap-6">
+					<a href="/blog" class="font-body text-[13px] tracking-[0.5px] text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)]">
+						&larr; Back to Articles
+					</a>
+					<h1 class="font-display text-[36px] font-semibold tracking-[-1.5px] leading-[1.1] text-[var(--color-text-primary)]">
+						{title}
+					</h1>
+					<div class="flex items-center gap-6">
+						<time class="font-mono text-[13px] text-[var(--color-text-muted)]">{formatDate(pubDate)}</time>
+						<span class="text-[var(--color-text-muted)]">&bull;</span>
+						<span class="font-body text-[13px] text-[var(--color-text-muted)]">{readTime}</span>
+						<span class="text-[var(--color-text-muted)]">&bull;</span>
+						<span class="font-body text-[13px] font-medium text-[var(--color-text-secondary)]">Guillaume Moigneu</span>
 					</div>
+					{updatedDate && (
+						<p class="font-body text-[13px] text-[var(--color-text-muted)] italic">
+							Updated on {formatDate(updatedDate)}
+						</p>
+					)}
+				</header>
+
+				<!-- Hero Image -->
+				{heroImage && (
+					<div class="w-full">
+						<Image
+							src={heroImage}
+							alt={title}
+							class="w-full rounded-lg"
+							width={720}
+							height={360}
+						/>
+					</div>
+				)}
+
+				<!-- Article Body -->
+				<div class="prose">
 					<slot />
 				</div>
+
+				<!-- Article Footer -->
+				<footer class="flex flex-col gap-8">
+					<!-- Divider -->
+					<div class="h-px bg-[var(--color-divider)]"></div>
+
+					<!-- Author Box -->
+					<div class="flex items-center gap-6 bg-[#F5F2ED] p-8 rounded-lg">
+						<div class="w-20 h-20 bg-[#E8E5DF] flex items-center justify-center rounded-full">
+							<span class="font-body text-[24px] font-semibold text-[var(--color-text-secondary)]">GM</span>
+						</div>
+						<div class="flex flex-col gap-2">
+							<span class="font-display text-[20px] font-semibold text-[var(--color-text-primary)]">Guillaume Moigneu</span>
+							<p class="font-body text-[14px] leading-[1.5] text-[var(--color-text-secondary)] max-w-[480px]">
+								Field CTO at Upsun. Developer, Speaker, and Optimization enthusiast with a passion for sustainable technology and AI-driven solutions.
+							</p>
+						</div>
+					</div>
+				</footer>
 			</article>
 		</main>
+
 		<Footer />
+
+		<!-- Mermaid.js for diagrams -->
+		<script is:inline type="module">
+			const mermaid = await import('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs');
+
+			mermaid.default.initialize({
+				startOnLoad: false,
+				theme: 'base',
+				themeVariables: {
+					primaryColor: '#333333',
+					primaryTextColor: '#ffffff',
+					primaryBorderColor: '#FF6B35',
+					lineColor: '#FF6B35',
+					secondaryColor: '#666666',
+					tertiaryColor: '#F5F2ED',
+					background: '#ffffff',
+					mainBkg: '#333333',
+					secondBkg: '#666666',
+					nodeBorder: '#FF6B35',
+					clusterBkg: '#F5F2ED',
+					clusterBorder: '#999999',
+					titleColor: '#1A1A1A',
+					edgeLabelBackground: '#ffffff',
+					fontFamily: 'system-ui, -apple-system, sans-serif',
+				},
+			});
+
+			// Convert code blocks to mermaid format and render
+			document.querySelectorAll('pre[data-language="mermaid"]').forEach((pre) => {
+				const mermaidDiv = document.createElement('div');
+				mermaidDiv.className = 'mermaid';
+				mermaidDiv.textContent = pre.textContent;
+				pre.replaceWith(mermaidDiv);
+			});
+
+			await mermaid.default.run();
+		</script>
 	</body>
 </html>

@@ -1,0 +1,95 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Navigation from '../../components/Navigation.astro';
+import { SITE_TITLE } from '../../consts';
+
+const publications = (await getCollection('publications')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+// Separate featured and regular publications
+const featuredPubs = publications.filter(pub => pub.data.featured);
+const recentPubs = publications.filter(pub => !pub.data.featured);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Publications - ${SITE_TITLE}`} description="Technical articles and thought leadership pieces published across leading platforms" />
+	</head>
+	<body class="bg-[var(--color-background)] font-body min-h-full flex flex-col">
+		<Navigation currentPage="publications" />
+
+		<!-- Content Container -->
+		<main class="flex-1 flex flex-col items-center p-16">
+			<div class="w-full max-w-[880px] flex flex-col gap-16">
+				<!-- Page Header -->
+				<header class="flex flex-col gap-4">
+					<h1 class="font-display text-[56px] italic tracking-[-1.5px] text-[var(--color-text-primary)]">Publications</h1>
+					<p class="font-body text-[18px] leading-[1.5] text-[var(--color-text-secondary)]">Technical articles and thought leadership pieces published across leading platforms</p>
+				</header>
+
+				<!-- Featured Section -->
+				{featuredPubs.length > 0 && (
+					<section class="flex flex-col gap-8">
+						<!-- Section Header -->
+						<div class="flex items-center pt-4">
+							<span class="font-body text-[11px] font-bold tracking-[2px] text-[var(--color-text-primary)]">FEATURED</span>
+						</div>
+
+						<!-- Divider -->
+						<div class="h-px bg-[var(--color-divider)]"></div>
+
+						<!-- Featured Publications -->
+						<div class="flex flex-col gap-12">
+							{featuredPubs.map((pub) => (
+								<article class="flex flex-col gap-4 bg-[#F5F2ED] p-8">
+									<span class="font-body text-[11px] font-semibold tracking-[1.5px] text-[var(--color-text-muted)]">{pub.data.source.toUpperCase()}</span>
+									<h2 class="font-display text-[28px] font-semibold tracking-[-0.5px] leading-[1.2] text-[var(--color-text-primary)]">{pub.data.title}</h2>
+									<p class="font-body text-[16px] leading-[1.6] text-[var(--color-text-secondary)]">{pub.data.description}</p>
+									<a href={pub.data.url} target="_blank" rel="noopener noreferrer" class="font-body text-[14px] font-medium text-[var(--color-text-primary)] hover:text-[var(--color-text-secondary)]">Read on {pub.data.source} &rarr;</a>
+								</article>
+							))}
+						</div>
+					</section>
+				)}
+
+				<!-- Recent Publications Section -->
+				{recentPubs.length > 0 && (
+					<section class="flex flex-col gap-8">
+						<!-- Section Header -->
+						<div class="flex items-center pt-4">
+							<span class="font-body text-[11px] font-bold tracking-[2px] text-[var(--color-text-primary)]">RECENT PUBLICATIONS</span>
+						</div>
+
+						<!-- Divider -->
+						<div class="h-px bg-[var(--color-divider)]"></div>
+
+						<!-- Recent Publications List -->
+						<div class="flex flex-col">
+							{recentPubs.map((pub, index) => (
+								<>
+									<article class="flex flex-col gap-3 py-6">
+										<div class="flex items-start justify-between gap-4">
+											<h3 class="font-display text-[20px] font-medium tracking-[-0.3px] text-[var(--color-text-primary)]">{pub.data.title}</h3>
+											<span class="font-body text-[12px] font-medium text-[var(--color-text-muted)] shrink-0">{pub.data.source}</span>
+										</div>
+										<p class="font-body text-[15px] leading-[1.5] text-[var(--color-text-secondary)]">{pub.data.description}</p>
+										<a href={pub.data.url} target="_blank" rel="noopener noreferrer" class="font-body text-[13px] font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">Read Article &rarr;</a>
+									</article>
+									{index < recentPubs.length - 1 && (
+										<div class="h-px bg-[var(--color-divider)]"></div>
+									)}
+								</>
+							))}
+						</div>
+					</section>
+				)}
+			</div>
+		</main>
+
+		<Footer />
+	</body>
+</html>

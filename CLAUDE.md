@@ -44,3 +44,24 @@ Blog posts live in `src/content/blog/` as Markdown or MDX files. The schema is d
 ### Styling
 
 Global styles in [src/styles/global.css](src/styles/global.css). Component-scoped styles use `<style>` blocks within `.astro` files.
+
+### Color Palette
+
+The site uses a minimal color palette defined in CSS variables:
+- `--color-background`: `#FDFCF9` (off-white)
+- `--color-text-primary`: `#1A1A1A` (near-black)
+- `--color-text-secondary`: `#666666` (dark gray)
+- `--color-text-muted`: `#999999` (gray)
+- `--color-divider`: `#E5E2DC` (light gray)
+- `--color-accent`: `#FF6B35` (bright orange) - used for links and interactive elements
+- `--color-accent-dark`: `#E55A2B` (darker orange) - used for hover states
+
+### Mermaid Diagrams
+
+Mermaid diagrams are supported in blog posts using fenced code blocks with `mermaid` language. The configuration is in [src/layouts/BlogPost.astro](src/layouts/BlogPost.astro).
+
+**Color rules for Mermaid diagrams:**
+- Use only: white (`#ffffff`), grays (`#F5F2ED`, `#999999`, `#666666`, `#333333`), black (`#1A1A1A`), and bright orange (`#FF6B35`)
+- Node backgrounds: dark gray (`#333333`) with white text
+- Borders and lines: bright orange (`#FF6B35`)
+- Subgraph/cluster backgrounds: light gray (`#F5F2ED`)

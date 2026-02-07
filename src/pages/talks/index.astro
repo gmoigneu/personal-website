@@ -1,0 +1,140 @@
+---
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Navigation from '../../components/Navigation.astro';
+import { SITE_TITLE } from '../../consts';
+
+const talks = (await getCollection('talks')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+// Separate upcoming and past talks
+const upcomingTalks = talks.filter(talk => talk.data.status === 'upcoming');
+const pastTalks = talks.filter(talk => talk.data.status === 'past');
+
+// Group past talks by year
+const pastTalksByYear = pastTalks.reduce((acc, talk) => {
+	const year = talk.data.date.getFullYear();
+	if (!acc[year]) {
+		acc[year] = [];
+	}
+	acc[year].push(talk);
+	return acc;
+}, {} as Record<number, typeof pastTalks>);
+
+// Get sorted years (descending)
+const years = Object.keys(pastTalksByYear).map(Number).sort((a, b) => b - a);
+
+function formatDate(date: Date) {
+	return date.toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	});
+}
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Speaking Engagements - ${SITE_TITLE}`} description="Sharing knowledge on AI, sustainability, and modern development practices at conferences worldwide" />
+	</head>
+	<body class="bg-[var(--color-background)] font-body min-h-full flex flex-col">
+		<Navigation currentPage="talks" />
+
+		<!-- Content Container -->
+		<main class="flex-1 flex flex-col items-center p-16">
+			<div class="w-full max-w-[880px] flex flex-col gap-16">
+				<!-- Page Header -->
+				<header class="flex flex-col gap-4">
+					<h1 class="font-display text-[56px] italic tracking-[-1.5px] text-[var(--color-text-primary)]">Speaking Engagements</h1>
+					<p class="font-body text-[18px] leading-[1.5] text-[var(--color-text-secondary)]">Sharing knowledge on AI, sustainability, and modern development practices at conferences worldwide</p>
+				</header>
+
+				<!-- Upcoming Talks Section -->
+				{upcomingTalks.length > 0 && (
+					<section class="flex flex-col gap-8">
+						<!-- Section Header -->
+						<div class="flex items-center gap-4 pt-4">
+							<h2 class="font-display text-[36px] font-semibold tracking-[-0.5px] text-[var(--color-text-primary)]">Upcoming</h2>
+							<span class="font-body text-[14px] text-[var(--color-text-muted)]">{upcomingTalks.length} {upcomingTalks.length === 1 ? 'talk' : 'talks'}</span>
+						</div>
+
+						<!-- Divider -->
+						<div class="h-px bg-[var(--color-divider)]"></div>
+
+						<!-- Talks List -->
+						<div class="flex flex-col gap-8">
+							{upcomingTalks.map((talk) => (
+								<article class="flex gap-8">
+									{talk.data.heroImage ? (
+										<Image src={talk.data.heroImage} alt={talk.data.conference} width={200} height={120} class="w-[200px] h-[120px] object-cover shrink-0" />
+									) : (
+										<div class="w-[200px] h-[120px] bg-[var(--color-divider)] shrink-0"></div>
+									)}
+									<div class="flex flex-col gap-3">
+										<time class="font-mono text-[13px] text-[var(--color-text-muted)]">{formatDate(talk.data.date)}</time>
+										<h3 class="font-display text-[20px] font-semibold tracking-[-0.3px] text-[var(--color-text-primary)]">{talk.data.conference}</h3>
+										<p class="font-body text-[16px] font-medium leading-[1.5] text-[var(--color-text-secondary)]">{talk.data.title}</p>
+										<div class="flex gap-6">
+											{talk.data.conferenceUrl && (
+												<a href={talk.data.conferenceUrl} target="_blank" rel="noopener noreferrer" class="font-body text-[13px] font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">View Conference &rarr;</a>
+											)}
+										</div>
+									</div>
+								</article>
+							))}
+						</div>
+					</section>
+				)}
+
+				<!-- Past Talks by Year -->
+				{years.map((year) => (
+					<section class="flex flex-col gap-8">
+						<!-- Year Header -->
+						<div class="flex items-center gap-4 pt-4">
+							<h2 class="font-display text-[36px] font-semibold tracking-[-0.5px] text-[var(--color-text-primary)]">{year}</h2>
+							<span class="font-body text-[14px] text-[var(--color-text-muted)]">{pastTalksByYear[year].length} {pastTalksByYear[year].length === 1 ? 'talk' : 'talks'}</span>
+						</div>
+
+						<!-- Divider -->
+						<div class="h-px bg-[var(--color-divider)]"></div>
+
+						<!-- Talks List -->
+						<div class="flex flex-col gap-8">
+							{pastTalksByYear[year].map((talk) => (
+								<article class="flex gap-8">
+									{talk.data.heroImage ? (
+										<Image src={talk.data.heroImage} alt={talk.data.conference} width={200} height={120} class="w-[200px] h-[120px] object-cover shrink-0" />
+									) : (
+										<div class="w-[200px] h-[120px] bg-[var(--color-divider)] shrink-0"></div>
+									)}
+									<div class="flex flex-col gap-3">
+										<time class="font-mono text-[13px] text-[var(--color-text-muted)]">{formatDate(talk.data.date)}</time>
+										<h3 class="font-display text-[20px] font-semibold tracking-[-0.3px] text-[var(--color-text-primary)]">{talk.data.conference}</h3>
+										<p class="font-body text-[16px] font-medium leading-[1.5] text-[var(--color-text-secondary)]">{talk.data.title}</p>
+										<div class="flex gap-6">
+											{talk.data.conferenceUrl && (
+												<a href={talk.data.conferenceUrl} target="_blank" rel="noopener noreferrer" class="font-body text-[13px] font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">View Conference &rarr;</a>
+											)}
+											{talk.data.slidesUrl && (
+												<a href={talk.data.slidesUrl} target="_blank" rel="noopener noreferrer" class="font-body text-[13px] font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">Download Slides &rarr;</a>
+											)}
+											{talk.data.videoUrl && (
+												<a href={talk.data.videoUrl} target="_blank" rel="noopener noreferrer" class="font-body text-[13px] font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">Watch Video &rarr;</a>
+											)}
+										</div>
+									</div>
+								</article>
+							))}
+						</div>
+					</section>
+				))}
+			</div>
+		</main>
+
+		<Footer />
+	</body>
+</html>

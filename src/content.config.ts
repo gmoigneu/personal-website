@@ -16,4 +16,31 @@ const blog = defineCollection({
 		}),
 });
 
-export const collections = { blog };
+const talks = defineCollection({
+	loader: glob({ base: './src/content/talks', pattern: '**/*.{md,mdx}' }),
+	schema: ({ image }) =>
+		z.object({
+			title: z.string(),
+			conference: z.string(),
+			date: z.coerce.date(),
+			status: z.enum(['upcoming', 'past']),
+			conferenceUrl: z.string().url().optional(),
+			slidesUrl: z.string().optional(),
+			videoUrl: z.string().url().optional(),
+			heroImage: image().optional(),
+		}),
+});
+
+const publications = defineCollection({
+	loader: glob({ base: './src/content/publications', pattern: '**/*.{md,mdx}' }),
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		source: z.string(),
+		pubDate: z.coerce.date(),
+		url: z.string().url(),
+		featured: z.boolean().default(false),
+	}),
+});
+
+export const collections = { blog, talks, publications };

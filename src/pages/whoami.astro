@@ -1,0 +1,97 @@
+---
+import { Image } from 'astro:assets';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+import { SITE_TITLE } from '../consts';
+import portraitImage from '../assets/portrait.jpg';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About - ${SITE_TITLE}`} description="Field CTO at Upsun, focused on AI and Cloud Sustainability" />
+	</head>
+	<body class="bg-[var(--color-background)] font-body min-h-full flex flex-col">
+		<Navigation currentPage="whoami" />
+
+		<!-- Content Container -->
+		<main class="flex-1 flex flex-col items-center p-16">
+			<div class="w-full max-w-[880px] flex flex-col gap-16">
+				<!-- Hero Section with Image -->
+				<section class="flex gap-16 items-start">
+					<div class="flex flex-col gap-6 flex-1">
+						<h1 class="font-display text-[56px] italic tracking-[-1.5px] text-[var(--color-text-primary)]">About</h1>
+						<p class="font-body text-[18px] leading-[1.6] text-[var(--color-text-secondary)]">
+							I'm Guillaume Moigneu, alias G/, Field CTO at <a href="https://upsun.com" class="underline hover:text-[var(--color-text-primary)]">Upsun</a>, a cloud applications platform. Based in Texas, originally from France.
+						</p>
+					</div>
+					<Image
+						src={portraitImage}
+						alt="Guillaume Moigneu"
+						width={280}
+						height={280}
+						class="rounded-full rotate-3 shrink-0"
+					/>
+				</section>
+
+				<!-- Divider -->
+				<div class="h-px bg-[var(--color-divider)]"></div>
+
+				<!-- AI Section -->
+				<section class="flex flex-col gap-6">
+					<h2 class="font-display text-[32px] font-semibold tracking-[-0.5px] text-[var(--color-text-primary)]">AI & Coding Agents</h2>
+					<div class="flex flex-col gap-4">
+						<p class="font-body text-[16px] leading-[1.7] text-[var(--color-text-secondary)]">
+							I spend most of my time right now figuring out how to make AI coding agents actually work in enterprise environments, not toy demos, but reliable systems that teams can trust with real codebases. The gap between "impressive demo" and "production-ready tool" is enormous, and that's the space I'm obsessed with.
+						</p>
+						<p class="font-body text-[16px] leading-[1.7] text-[var(--color-text-secondary)]">
+							My current focus is on spec-driven development for agents: giving them structured specifications instead of vague prompts, and building verification frameworks that catch mistakes before they hit production. Building a systematic approach to validating agent output that goes way beyond "does it compile." Think type checking, architectural conformance, security scanning, test generation, and more, all orchestrated as guardrails around agent workflows.
+						</p>
+						<p class="font-body text-[16px] leading-[1.7] text-[var(--color-text-secondary)]">
+							I also work on the infrastructure side: how agents can autonomously provision and deploy to cloud platforms, and how we build web applications that work seamlessly for both humans and AI agents. I've been sharing these ideas at conferences like DotAI, SymfonyCon, and AI Day, and through live coding sessions where I put agents to the test on stage. It's a wild time to be building this stuff, and I genuinely believe we're only scratching the surface.
+						</p>
+					</div>
+				</section>
+
+				<!-- Divider -->
+				<div class="h-px bg-[var(--color-divider)]"></div>
+
+				<!-- Sustainability Section -->
+				<section class="flex flex-col gap-6">
+					<h2 class="font-display text-[32px] font-semibold tracking-[-0.5px] text-[var(--color-text-primary)]">Cloud Sustainability</h2>
+					<p class="font-body text-[16px] leading-[1.7] text-[var(--color-text-secondary)]">
+						I'm deeply committed to making cloud infrastructure more sustainable through resource optimization, renewable energy adoption, and green technology advocacy. My goal is aligning technological progress with environmental responsibility.
+					</p>
+				</section>
+
+				<!-- Divider -->
+				<div class="h-px bg-[var(--color-divider)]"></div>
+
+				<!-- Personal Section -->
+				<section class="flex flex-col gap-6">
+					<h2 class="font-display text-[32px] font-semibold tracking-[-0.5px] text-[var(--color-text-primary)]">Beyond Work</h2>
+					<p class="font-body text-[16px] leading-[1.7] text-[var(--color-text-secondary)]">
+						Beyond my professional role, I'm an avid learner who loves launching side projects to test new ideas and technologies, keeping myself at the forefront of industry developments.
+					</p>
+				</section>
+
+				<!-- Divider -->
+				<div class="h-px bg-[var(--color-divider)]"></div>
+
+				<!-- Contact Section -->
+				<section class="flex flex-col gap-6">
+					<h2 class="font-display text-[32px] font-semibold tracking-[-0.5px] text-[var(--color-text-primary)]">Get in Touch</h2>
+					<div class="flex gap-8">
+						<a href="mailto:g@moigneu.com" class="font-body text-[14px] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">Email</a>
+						<a href="https://bsky.app/profile/nls.io" target="_blank" rel="noopener noreferrer" class="font-body text-[14px] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">BlueSky</a>
+						<a href="https://github.com/gmoigneu" target="_blank" rel="noopener noreferrer" class="font-body text-[14px] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">GitHub</a>
+						<a href="https://linkedin.com/in/guillaumemoigneu" target="_blank" rel="noopener noreferrer" class="font-body text-[14px] text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">LinkedIn</a>
+					</div>
+				</section>
+			</div>
+		</main>
+
+		<Footer />
+	</body>
+</html>

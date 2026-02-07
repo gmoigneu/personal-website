@@ -1,0 +1,38 @@
+---
+interface Props {
+	currentPage?: 'home' | 'blog' | 'whoami' | 'talks' | 'publications';
+}
+
+const { currentPage } = Astro.props;
+
+const navItems = [
+	{ href: '/blog', label: 'Articles', id: 'blog' },
+	{ href: '/whoami', label: '/whoami', id: 'whoami' },
+	{ href: '/talks', label: 'Talks', id: 'talks' },
+	{ href: '/publications', label: 'Publications', id: 'publications' },
+];
+---
+
+<header class="flex items-center justify-between h-20 px-16 border-b-1 border-[var(--color-divider)]">
+	<nav class="flex items-center gap-12 px-2 py-4 w-full">
+		<a href="/" class="font-display text-[28px] font-bold tracking-[3px] text-[var(--color-text-primary)]">G/</a>
+		<div class="flex items-center gap-8">
+			{navItems.map((item) => (
+				<a
+					href={item.href}
+					class:list={[
+						'font-body text-[13px] tracking-[0.5px] transition-colors',
+						currentPage === item.id
+							? 'font-semibold text-[var(--color-text-primary)]'
+							: 'text-[var(--color-text-secondary)] hover:text-[var(--color-accent)]'
+					]}
+				>
+					{item.label}
+				</a>
+			))}
+		</div>
+	</nav>
+</header>
+
+<!-- Divider -->
+<div class="h-px bg-[var(--color-divider)]"></div>

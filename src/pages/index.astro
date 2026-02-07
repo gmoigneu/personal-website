@@ -1,49 +1,136 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import Navigation from '../components/Navigation.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).slice(0, 4);
+
+const publications = (await getCollection('publications')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+).slice(0, 4);
+
+function formatDate(date: Date) {
+	return date.toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	});
+}
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<script is:inline type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Guillaume Moigneu",
+			"alternateName": "G/",
+			"url": "https://guillaume.id",
+			"jobTitle": "Field CTO",
+			"worksFor": {
+				"@type": "Organization",
+				"name": "Upsun",
+				"url": "https://upsun.com"
+			},
+			"sameAs": [
+				"https://github.com/gmoigneu",
+				"https://linkedin.com/in/guillaumemoigneu",
+				"https://bsky.app/profile/nls.io"
+			],
+			"knowsAbout": ["AI", "Cloud Computing", "Sustainability", "Software Development"]
+		})} />
 	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
+	<body class="bg-[var(--color-background)] font-body min-h-full flex flex-col">
+		<Navigation currentPage="home" />
+
+		<!-- Hero Section -->
+		<section class="px-16 pt-16 pb-12">
+			<div class="max-w-[760px] flex flex-col gap-6">
+				<h1 class="font-display text-[72px] italic font-normal tracking-[-2px] text-[var(--color-text-primary)]">Guillaume Moigneu</h1>
+				<p class="font-display text-[24px] font-semibold text-[var(--color-text-primary)]">Developer, Speaker, Optimization freak.</p>
+				<p class="font-display text-[20px] text-[var(--color-text-secondary)]">Sustainability & AI enthusiast.</p>
+				<p class="font-body text-[16px] leading-[1.6] text-[var(--color-text-secondary)]">
+					I'm Guillaume Moigneu, alias G/, Field CTO at Upsun, a cloud applications platform dedicated to simplifying application deployment and operations. With a focus on AI and Sustainability, I strive to make running apps seamless for every developer.
+				</p>
+			</div>
+		</section>
+
+		<!-- Divider -->
+		<div class="h-px bg-[var(--color-divider)]"></div>
+
+		<!-- Articles Section -->
+		<section class="px-16 pt-12 pb-16 flex flex-col gap-8 flex-1">
+			<!-- Section Header -->
+			<div class="flex items-end justify-between pt-4">
+				<span class="font-body text-[11px] font-bold tracking-[2px] text-[var(--color-text-primary)]">RECENT ARTICLES</span>
+				<a href="/blog" class="font-body text-[12px] text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)]">View all &rarr;</a>
+			</div>
+
+			<!-- Section Divider -->
+			<div class="h-px bg-[var(--color-divider)]"></div>
+
+			<!-- Articles List -->
+			<div class="flex flex-col">
+				{posts.map((post, index) => (
+					<>
+						<article class="py-8 flex flex-col gap-4">
+							<time class="font-mono text-[12px] tracking-[0.5px] text-[var(--color-text-muted)]">{formatDate(post.data.pubDate)}</time>
+							<a href={`/blog/${post.id}/`} class="block">
+								<h2 class="font-display text-[32px] font-semibold tracking-[-0.5px] text-[var(--color-text-primary)] hover:text-[var(--color-text-secondary)]">{post.data.title}</h2>
+							</a>
+							<p class="font-body text-[16px] leading-[1.5] text-[var(--color-text-secondary)] max-w-[680px]">{post.data.description}</p>
+						</article>
+						{index < posts.length - 1 && (
+							<div class="h-px bg-[var(--color-divider)]"></div>
+						)}
+					</>
+				))}
+			</div>
+		</section>
+
+		<!-- Divider -->
+		<div class="h-px bg-[var(--color-divider)]"></div>
+
+		<!-- Publications Section -->
+		<section class="px-16 pt-12 pb-16 flex flex-col gap-8">
+			<!-- Section Header -->
+			<div class="flex items-end justify-between pt-4">
+				<span class="font-body text-[11px] font-bold tracking-[2px] text-[var(--color-text-primary)]">RECENT PUBLICATIONS</span>
+				<a href="/publications" class="font-body text-[12px] text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)]">View all &rarr;</a>
+			</div>
+
+			<!-- Section Divider -->
+			<div class="h-px bg-[var(--color-divider)]"></div>
+
+			<!-- Publications List -->
+			<div class="flex flex-col">
+				{publications.map((pub, index) => (
+					<>
+						<article class="py-8 flex flex-col gap-4">
+							<div class="flex items-center gap-4">
+								<time class="font-mono text-[12px] tracking-[0.5px] text-[var(--color-text-muted)]">{formatDate(pub.data.pubDate)}</time>
+								<span class="text-[var(--color-text-muted)]">&bull;</span>
+								<span class="font-body text-[12px] text-[var(--color-text-muted)]">{pub.data.source}</span>
+							</div>
+							<a href={pub.data.url} target="_blank" rel="noopener noreferrer" class="block">
+								<h2 class="font-display text-[32px] font-semibold tracking-[-0.5px] text-[var(--color-text-primary)] hover:text-[var(--color-accent)]">{pub.data.title}</h2>
+							</a>
+							<p class="font-body text-[16px] leading-[1.5] text-[var(--color-text-secondary)] max-w-[680px]">{pub.data.description}</p>
+						</article>
+						{index < publications.length - 1 && (
+							<div class="h-px bg-[var(--color-divider)]"></div>
+						)}
+					</>
+				))}
+			</div>
+		</section>
+
 		<Footer />
 	</body>
 </html>
