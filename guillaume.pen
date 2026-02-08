@@ -4512,6 +4512,7 @@
                       "content": "Articles",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -4533,6 +4534,7 @@
                       "content": "Talks",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -4543,6 +4545,7 @@
                       "content": "Publications",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     }
                   ]
@@ -4594,6 +4597,7 @@
                       "content": "/whoami",
                       "fontFamily": "Playfair Display",
                       "fontSize": 72,
+                      "fontWeight": "normal",
                       "letterSpacing": -2,
                       "fontStyle": "italic"
                     },
@@ -4640,6 +4644,7 @@
                       "lineHeight": 1.7,
                       "fontFamily": "Inter",
                       "fontSize": 18,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.1
                     },
                     {
@@ -4653,6 +4658,7 @@
                       "lineHeight": 1.7,
                       "fontFamily": "Inter",
                       "fontSize": 18,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.1
                     }
                   ]
@@ -4735,7 +4741,8 @@
                               "content": "Implementing cutting-edge AI solutions to enhance user experiences, develop predictive models, and drive innovation within the Upsun ecosystem. From intelligent systems that anticipate user needs to advanced automation that streamlines workflows.",
                               "lineHeight": 1.6,
                               "fontFamily": "Inter",
-                              "fontSize": 16
+                              "fontSize": 16,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -4768,7 +4775,8 @@
                               "content": "Advocating for environmentally responsible cloud practices, including optimizing resources, adopting renewable energy, and reducing carbon footprints. Making sustainability not just a goal but a core engineering principle.",
                               "lineHeight": 1.6,
                               "fontFamily": "Inter",
-                              "fontSize": 16
+                              "fontSize": 16,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -4800,6 +4808,7 @@
                       "lineHeight": 1.5,
                       "fontFamily": "Playfair Display",
                       "fontSize": 20,
+                      "fontWeight": "normal",
                       "letterSpacing": -0.3,
                       "fontStyle": "italic"
                     }
@@ -4878,7 +4887,8 @@
                               "fill": "#1A1A1A",
                               "content": "g@guillaume.id",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 14
+                              "fontSize": 14,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -4907,7 +4917,8 @@
                               "fill": "#1A1A1A",
                               "content": "gmoigneu",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 14
+                              "fontSize": 14,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -4936,7 +4947,8 @@
                               "fill": "#1A1A1A",
                               "content": "guillaumemoigneu",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 14
+                              "fontSize": 14,
+                              "fontWeight": "normal"
                             }
                           ]
                         },
@@ -4965,7 +4977,8 @@
                               "fill": "#1A1A1A",
                               "content": "nls.io",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 14
+                              "fontSize": 14,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -5046,6 +5059,7 @@
                       "content": "/whoami",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -5056,6 +5070,7 @@
                       "content": "Talks",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -5066,6 +5081,7 @@
                       "content": "Publications",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     }
                   ]
@@ -5133,7 +5149,8 @@
                   "fill": "#666666",
                   "content": "Sustainability & AI enthusiast.",
                   "fontFamily": "Playfair Display",
-                  "fontSize": 20
+                  "fontSize": 20,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "text",
@@ -5145,7 +5162,8 @@
                   "content": "I'm Guillaume Moigneu, alias G/, Field CTO at Upsun, a cloud applications platform dedicated to simplifying application deployment and operations. With a focus on AI and Sustainability, I strive to make running apps seamless for every developer.",
                   "lineHeight": 1.6,
                   "fontFamily": "Inter",
-                  "fontSize": 16
+                  "fontSize": 16,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -5205,7 +5223,8 @@
                   "fill": "#999999",
                   "content": "View all →",
                   "fontFamily": "Inter",
-                  "fontSize": 12
+                  "fontSize": 12,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -5244,6 +5263,7 @@
                       "content": "January 15, 2024",
                       "fontFamily": "IBM Plex Mono",
                       "fontSize": 12,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -5267,7 +5287,8 @@
                       "content": "Exploring strategies to reduce carbon footprint in cloud infrastructure while maintaining performance and scalability. A deep dive into green computing practices.",
                       "lineHeight": 1.5,
                       "fontFamily": "Inter",
-                      "fontSize": 16
+                      "fontSize": 16,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "frame",
@@ -5319,6 +5340,7 @@
                       "content": "December 28, 2023",
                       "fontFamily": "IBM Plex Mono",
                       "fontSize": 12,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -5342,7 +5364,8 @@
                       "content": "How artificial intelligence is revolutionizing continuous integration and deployment pipelines, enabling smarter and more efficient software delivery.",
                       "lineHeight": 1.5,
                       "fontFamily": "Inter",
-                      "fontSize": 16
+                      "fontSize": 16,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "frame",
@@ -5394,6 +5417,7 @@
                       "content": "November 10, 2023",
                       "fontFamily": "IBM Plex Mono",
                       "fontSize": 12,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -5417,7 +5441,8 @@
                       "content": "Real-world experiences and best practices for managing microservices architectures in production environments, with focus on observability and resilience.",
                       "lineHeight": 1.5,
                       "fontFamily": "Inter",
-                      "fontSize": 16
+                      "fontSize": 16,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "frame",
@@ -5469,6 +5494,7 @@
                       "content": "October 5, 2023",
                       "fontFamily": "IBM Plex Mono",
                       "fontSize": 12,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -5492,7 +5518,8 @@
                       "content": "A comprehensive guide to application performance optimization, from code-level improvements to infrastructure tuning and everything in between.",
                       "lineHeight": 1.5,
                       "fontFamily": "Inter",
-                      "fontSize": 16
+                      "fontSize": 16,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "frame",
@@ -5563,7 +5590,8 @@
                   "fill": "#666666",
                   "content": "Field CTO at Upsun",
                   "fontFamily": "Inter",
-                  "fontSize": 14
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 },
                 {
                   "type": "text",
@@ -5572,7 +5600,8 @@
                   "fill": "#999999",
                   "content": "© 2024 All rights reserved",
                   "fontFamily": "Inter",
-                  "fontSize": 12
+                  "fontSize": 12,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -5607,7 +5636,8 @@
                       "fill": "#666666",
                       "content": "GitHub",
                       "fontFamily": "Inter",
-                      "fontSize": 13
+                      "fontSize": 13,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "text",
@@ -5616,7 +5646,8 @@
                       "fill": "#666666",
                       "content": "LinkedIn",
                       "fontFamily": "Inter",
-                      "fontSize": 13
+                      "fontSize": 13,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "text",
@@ -5625,7 +5656,8 @@
                       "fill": "#666666",
                       "content": "Twitter",
                       "fontFamily": "Inter",
-                      "fontSize": 13
+                      "fontSize": 13,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -5654,7 +5686,8 @@
                       "fill": "#666666",
                       "content": "RSS Feed",
                       "fontFamily": "Inter",
-                      "fontSize": 13
+                      "fontSize": 13,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "text",
@@ -5663,7 +5696,8 @@
                       "fill": "#666666",
                       "content": "Archive",
                       "fontFamily": "Inter",
-                      "fontSize": 13
+                      "fontSize": 13,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "text",
@@ -5672,7 +5706,8 @@
                       "fill": "#666666",
                       "content": "Newsletter",
                       "fontFamily": "Inter",
-                      "fontSize": 13
+                      "fontSize": 13,
+                      "fontWeight": "normal"
                     }
                   ]
                 }
@@ -5749,6 +5784,7 @@
                       "content": "/whoami",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -5759,6 +5795,7 @@
                       "content": "Talks",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -5769,6 +5806,7 @@
                       "content": "Publications",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     }
                   ]
@@ -5820,6 +5858,7 @@
                       "content": "← Back to Articles",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -5850,7 +5889,8 @@
                           "fill": "#999999",
                           "content": "February 5, 2024",
                           "fontFamily": "IBM Plex Mono",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "text",
@@ -5859,7 +5899,8 @@
                           "fill": "#999999",
                           "content": "•",
                           "fontFamily": "Inter",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "text",
@@ -5868,7 +5909,8 @@
                           "fill": "#999999",
                           "content": "12 min read",
                           "fontFamily": "Inter",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "text",
@@ -5877,7 +5919,8 @@
                           "fill": "#999999",
                           "content": "•",
                           "fontFamily": "Inter",
-                          "fontSize": 13
+                          "fontSize": 13,
+                          "fontWeight": "normal"
                         },
                         {
                           "type": "text",
@@ -5904,6 +5947,7 @@
                   "lineHeight": 1.6,
                   "fontFamily": "Inter",
                   "fontSize": 20,
+                  "fontWeight": "normal",
                   "letterSpacing": 0.2
                 },
                 {
@@ -5936,6 +5980,7 @@
                       "lineHeight": 1.7,
                       "fontFamily": "Inter",
                       "fontSize": 18,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.1
                     },
                     {
@@ -5949,6 +5994,7 @@
                       "lineHeight": 1.7,
                       "fontFamily": "Inter",
                       "fontSize": 18,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.1
                     },
                     {
@@ -5973,6 +6019,7 @@
                       "lineHeight": 1.7,
                       "fontFamily": "Inter",
                       "fontSize": 18,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.1
                     },
                     {
@@ -5985,7 +6032,8 @@
                       "content": "Here's an example of implementing a basic predictive scaling algorithm using Python and TensorFlow:",
                       "lineHeight": 1.6,
                       "fontFamily": "Inter",
-                      "fontSize": 16
+                      "fontSize": 16,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "frame",
@@ -6016,7 +6064,8 @@
                           "content": "import tensorflow as tf\nimport numpy as np\nfrom datetime import datetime, timedelta\n\nclass PredictiveScaler:\n    def __init__(self, history_days=30):\n        self.history_days = history_days\n        self.model = self._build_model()\n        \n    def _build_model(self):\n        \"\"\"Build LSTM model for time series prediction\"\"\"\n        model = tf.keras.Sequential([\n            tf.keras.layers.LSTM(50, activation='relu', \n                                input_shape=(self.history_days, 3)),\n            tf.keras.layers.Dense(25),\n            tf.keras.layers.Dense(1)\n        ])\n        model.compile(optimizer='adam', loss='mse')\n        return model",
                           "lineHeight": 1.6,
                           "fontFamily": "IBM Plex Mono",
-                          "fontSize": 14
+                          "fontSize": 14,
+                          "fontWeight": "normal"
                         }
                       ]
                     },
@@ -6049,7 +6098,8 @@
                           "content": "    def predict_load(self, current_metrics):\n        \"\"\"Predict future resource requirements\"\"\"\n        predictions = self.model.predict(current_metrics)\n        \n        # Apply sustainability constraints\n        if self.carbon_aware:\n            predictions = self._apply_carbon_optimization(predictions)\n            \n        return {\n            'cpu_cores': int(predictions[0] * 1.2),  # 20% buffer\n            'memory_gb': int(predictions[1] * 1.15),  # 15% buffer\n            'estimated_carbon_saved': self._calculate_carbon_savings(predictions)\n        }",
                           "lineHeight": 1.6,
                           "fontFamily": "IBM Plex Mono",
-                          "fontSize": 14
+                          "fontSize": 14,
+                          "fontWeight": "normal"
                         }
                       ]
                     },
@@ -6064,6 +6114,7 @@
                       "lineHeight": 1.7,
                       "fontFamily": "Inter",
                       "fontSize": 18,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.1
                     },
                     {
@@ -6088,6 +6139,7 @@
                       "lineHeight": 1.7,
                       "fontFamily": "Inter",
                       "fontSize": 18,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.1
                     },
                     {
@@ -6132,6 +6184,7 @@
                               "lineHeight": 1.7,
                               "fontFamily": "Inter",
                               "fontSize": 18,
+                              "fontWeight": "normal",
                               "letterSpacing": 0.1
                             }
                           ]
@@ -6164,6 +6217,7 @@
                               "lineHeight": 1.7,
                               "fontFamily": "Inter",
                               "fontSize": 18,
+                              "fontWeight": "normal",
                               "letterSpacing": 0.1
                             }
                           ]
@@ -6196,6 +6250,7 @@
                               "lineHeight": 1.7,
                               "fontFamily": "Inter",
                               "fontSize": 18,
+                              "fontWeight": "normal",
                               "letterSpacing": 0.1
                             }
                           ]
@@ -6224,6 +6279,7 @@
                       "lineHeight": 1.7,
                       "fontFamily": "Inter",
                       "fontSize": 18,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.1
                     },
                     {
@@ -6237,6 +6293,7 @@
                       "lineHeight": 1.7,
                       "fontFamily": "Inter",
                       "fontSize": 18,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.1
                     }
                   ]
@@ -6412,7 +6469,8 @@
                               "content": "Field CTO at Upsun. Developer, Speaker, and Optimization enthusiast with a passion for sustainable technology and AI-driven solutions.",
                               "lineHeight": 1.5,
                               "fontFamily": "Inter",
-                              "fontSize": 14
+                              "fontSize": 14,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -6493,6 +6551,7 @@
                       "content": "/whoami",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -6503,6 +6562,7 @@
                       "content": "Talks",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -6513,6 +6573,7 @@
                       "content": "Publications",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     }
                   ]
@@ -6561,6 +6622,7 @@
                       "content": "All Articles",
                       "fontFamily": "Playfair Display",
                       "fontSize": 56,
+                      "fontWeight": "normal",
                       "letterSpacing": -1.5,
                       "fontStyle": "italic"
                     },
@@ -6572,7 +6634,8 @@
                       "content": "A complete archive of thoughts, explorations, and technical deep-dives",
                       "lineHeight": 1.5,
                       "fontFamily": "Inter",
-                      "fontSize": 18
+                      "fontSize": 18,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -6616,7 +6679,8 @@
                           "fill": "#999999",
                           "content": "15 articles",
                           "fontFamily": "Inter",
-                          "fontSize": 14
+                          "fontSize": 14,
+                          "fontWeight": "normal"
                         }
                       ]
                     },
@@ -6655,7 +6719,8 @@
                               "fill": "#999999",
                               "content": "Feb 05",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -6692,7 +6757,8 @@
                               "fill": "#999999",
                               "content": "Jan 28",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -6729,7 +6795,8 @@
                               "fill": "#999999",
                               "content": "Jan 15",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -6766,7 +6833,8 @@
                               "fill": "#999999",
                               "content": "Jan 08",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -6827,7 +6895,8 @@
                           "fill": "#999999",
                           "content": "28 articles",
                           "fontFamily": "Inter",
-                          "fontSize": 14
+                          "fontSize": 14,
+                          "fontWeight": "normal"
                         }
                       ]
                     },
@@ -6866,7 +6935,8 @@
                               "fill": "#999999",
                               "content": "Dec 28",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -6903,7 +6973,8 @@
                               "fill": "#999999",
                               "content": "Dec 15",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -6940,7 +7011,8 @@
                               "fill": "#999999",
                               "content": "Nov 10",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -6977,7 +7049,8 @@
                               "fill": "#999999",
                               "content": "Oct 25",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -7014,7 +7087,8 @@
                               "fill": "#999999",
                               "content": "Oct 05",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -7051,7 +7125,8 @@
                               "fill": "#999999",
                               "content": "Sep 18",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -7112,7 +7187,8 @@
                           "fill": "#999999",
                           "content": "22 articles",
                           "fontFamily": "Inter",
-                          "fontSize": 14
+                          "fontSize": 14,
+                          "fontWeight": "normal"
                         }
                       ]
                     },
@@ -7151,7 +7227,8 @@
                               "fill": "#999999",
                               "content": "Dec 20",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -7188,7 +7265,8 @@
                               "fill": "#999999",
                               "content": "Nov 30",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -7225,7 +7303,8 @@
                               "fill": "#999999",
                               "content": "Oct 15",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -7262,7 +7341,8 @@
                               "fill": "#999999",
                               "content": "Sep 08",
                               "fontFamily": "IBM Plex Mono",
-                              "fontSize": 13
+                              "fontSize": 13,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -7305,7 +7385,8 @@
               "fill": "#999999",
               "content": "© 2024 Guillaume Moigneu. All rights reserved.",
               "fontFamily": "Inter",
-              "fontSize": 12
+              "fontSize": 12,
+              "fontWeight": "normal"
             }
           ]
         }
@@ -7367,6 +7448,7 @@
                       "content": "Articles",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -7377,6 +7459,7 @@
                       "content": "/whoami",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -7398,6 +7481,7 @@
                       "content": "Publications",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     }
                   ]
@@ -7449,6 +7533,7 @@
                       "content": "Speaking Engagements",
                       "fontFamily": "Playfair Display",
                       "fontSize": 56,
+                      "fontWeight": "normal",
                       "letterSpacing": -1.5,
                       "fontStyle": "italic"
                     },
@@ -7462,7 +7547,8 @@
                       "content": "Sharing knowledge on AI, sustainability, and modern development practices at conferences worldwide",
                       "lineHeight": 1.5,
                       "fontFamily": "Inter",
-                      "fontSize": 18
+                      "fontSize": 18,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -7545,7 +7631,8 @@
                                   "fill": "#999999",
                                   "content": "February 10, 2026",
                                   "fontFamily": "IBM Plex Mono",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -7615,7 +7702,8 @@
                                   "fill": "#999999",
                                   "content": "February 5, 2026",
                                   "fontFamily": "IBM Plex Mono",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -7738,7 +7826,8 @@
                                   "fill": "#999999",
                                   "content": "November 27, 2025",
                                   "fontFamily": "IBM Plex Mono",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -7826,7 +7915,8 @@
                                   "fill": "#999999",
                                   "content": "October 10, 2025",
                                   "fontFamily": "IBM Plex Mono",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -7949,7 +8039,8 @@
                                   "fill": "#999999",
                                   "content": "December 4, 2024",
                                   "fontFamily": "IBM Plex Mono",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -8080,7 +8171,8 @@
                                   "fill": "#999999",
                                   "content": "December 4, 2023",
                                   "fontFamily": "IBM Plex Mono",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -8150,7 +8242,8 @@
                                   "fill": "#999999",
                                   "content": "November 20, 2023",
                                   "fontFamily": "IBM Plex Mono",
-                                  "fontSize": 13
+                                  "fontSize": 13,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -8216,7 +8309,8 @@
               "fill": "#999999",
               "content": "© 2024 Guillaume Moigneu. All rights reserved.",
               "fontFamily": "Inter",
-              "fontSize": 12
+              "fontSize": 12,
+              "fontWeight": "normal"
             }
           ]
         }
@@ -8278,6 +8372,7 @@
                       "content": "Articles",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -8288,6 +8383,7 @@
                       "content": "/whoami",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -8298,6 +8394,7 @@
                       "content": "Talks",
                       "fontFamily": "Inter",
                       "fontSize": 13,
+                      "fontWeight": "normal",
                       "letterSpacing": 0.5
                     },
                     {
@@ -8361,6 +8458,7 @@
                       "content": "Publications",
                       "fontFamily": "Playfair Display",
                       "fontSize": 56,
+                      "fontWeight": "normal",
                       "letterSpacing": -1.5,
                       "fontStyle": "italic"
                     },
@@ -8374,7 +8472,8 @@
                       "content": "Technical articles and thought leadership pieces published across leading platforms",
                       "lineHeight": 1.5,
                       "fontFamily": "Inter",
-                      "fontSize": 18
+                      "fontSize": 18,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -8472,7 +8571,8 @@
                               "content": "An in-depth analysis of how artificial intelligence is transforming software development, from code completion to architectural decisions. Exploring the balance between automation and human creativity in modern development practices.",
                               "lineHeight": 1.6,
                               "fontFamily": "Inter",
-                              "fontSize": 16
+                              "fontSize": 16,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -8531,7 +8631,8 @@
                               "content": "Practical strategies for reducing the environmental impact of cloud computing. From workload optimization to renewable energy adoption, this piece outlines actionable steps for building eco-friendly infrastructure.",
                               "lineHeight": 1.6,
                               "fontFamily": "Inter",
-                              "fontSize": 16
+                              "fontSize": 16,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -8651,7 +8752,8 @@
                               "content": "A comprehensive guide to deploying and managing microservices at scale using Kubernetes, covering service mesh, observability, and security patterns.",
                               "lineHeight": 1.5,
                               "fontFamily": "Inter",
-                              "fontSize": 15
+                              "fontSize": 15,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -8727,7 +8829,8 @@
                               "content": "Exploring modern PHP development with focus on performance optimization, async programming, and integration with machine learning models.",
                               "lineHeight": 1.5,
                               "fontFamily": "Inter",
-                              "fontSize": 15
+                              "fontSize": 15,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -8803,7 +8906,8 @@
                               "content": "Building robust continuous integration and deployment pipelines for machine learning models, including versioning, testing, and monitoring strategies.",
                               "lineHeight": 1.5,
                               "fontFamily": "Inter",
-                              "fontSize": 15
+                              "fontSize": 15,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -8879,7 +8983,8 @@
                               "content": "An exploration of edge computing architectures and their role in reducing latency, improving privacy, and enabling real-time AI applications.",
                               "lineHeight": 1.5,
                               "fontFamily": "Inter",
-                              "fontSize": 15
+                              "fontSize": 15,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -8919,7 +9024,8 @@
               "fill": "#999999",
               "content": "© 2024 Guillaume Moigneu. All rights reserved.",
               "fontFamily": "Inter",
-              "fontSize": 12
+              "fontSize": 12,
+              "fontWeight": "normal"
             }
           ]
         }

@@ -13,15 +13,15 @@ const navItems = [
 ];
 ---
 
-<header class="flex items-center justify-between h-20 px-16 border-b-1 border-[var(--color-divider)]">
-	<nav class="flex items-center gap-12 px-2 py-4 w-full">
-		<a href="/" class="font-display text-[28px] font-bold tracking-[3px] text-[var(--color-text-primary)]">G/</a>
-		<div class="flex items-center gap-8">
+<header class="flex items-center justify-between h-20 px-4 sm:px-8 md:px-16 border-b-1 border-[var(--color-divider)]">
+	<nav class="flex items-center gap-4 sm:gap-8 md:gap-12 px-2 py-4 w-full">
+		<a href="/" class="font-display text-[20px] sm:text-[24px] md:text-[28px] font-bold tracking-[2px] sm:tracking-[3px] text-[var(--color-text-primary)]">G/</a>
+		<div class="flex items-center gap-3 sm:gap-6 md:gap-8">
 			{navItems.map((item) => (
 				<a
 					href={item.href}
 					class:list={[
-						'font-body text-[13px] tracking-[0.5px] transition-colors',
+						'font-body text-[11px] sm:text-[12px] md:text-[13px] tracking-[0.3px] sm:tracking-[0.5px] transition-colors',
 						currentPage === item.id
 							? 'font-semibold text-[var(--color-text-primary)]'
 							: 'text-[var(--color-text-secondary)] hover:text-[var(--color-accent)]'

@@ -23,11 +23,11 @@ const recentPubs = publications.filter(pub => !pub.data.featured);
 		<Navigation currentPage="publications" />
 
 		<!-- Content Container -->
-		<main class="flex-1 flex flex-col items-center p-16">
-			<div class="w-full max-w-[880px] flex flex-col gap-16">
+		<main class="flex-1 flex flex-col px-4 sm:px-8 md:px-16 py-8 sm:py-12 md:py-16">
+			<div class="max-w-[880px] flex flex-col gap-8 sm:gap-12 md:gap-16">
 				<!-- Page Header -->
 				<header class="flex flex-col gap-4">
-					<h1 class="font-display text-[56px] italic tracking-[-1.5px] text-[var(--color-text-primary)]">Publications</h1>
+					<h1 class="font-display text-[36px] sm:text-[44px] md:text-[56px] italic tracking-[-1px] sm:tracking-[-1.2px] md:tracking-[-1.5px] text-[var(--color-text-primary)]">Publications</h1>
 					<p class="font-body text-[18px] leading-[1.5] text-[var(--color-text-secondary)]">Technical articles and thought leadership pieces published across leading platforms</p>
 				</header>
 
@@ -72,10 +72,8 @@ const recentPubs = publications.filter(pub => !pub.data.featured);
 							{recentPubs.map((pub, index) => (
 								<>
 									<article class="flex flex-col gap-3 py-6">
-										<div class="flex items-start justify-between gap-4">
-											<h3 class="font-display text-[20px] font-medium tracking-[-0.3px] text-[var(--color-text-primary)]">{pub.data.title}</h3>
-											<span class="font-body text-[12px] font-medium text-[var(--color-text-muted)] shrink-0">{pub.data.source}</span>
-										</div>
+										<span class="font-body text-[12px] font-medium text-[var(--color-text-muted)]">{pub.data.source}</span>
+										<h3 class="font-display text-[20px] font-medium tracking-[-0.3px] text-[var(--color-text-primary)]">{pub.data.title}</h3>
 										<p class="font-body text-[15px] leading-[1.5] text-[var(--color-text-secondary)]">{pub.data.description}</p>
 										<a href={pub.data.url} target="_blank" rel="noopener noreferrer" class="font-body text-[13px] font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]">Read Article &rarr;</a>
 									</article>

@@ -45,11 +45,11 @@ function formatDate(date: Date) {
 		<Navigation currentPage="talks" />
 
 		<!-- Content Container -->
-		<main class="flex-1 flex flex-col items-center p-16">
-			<div class="w-full max-w-[880px] flex flex-col gap-16">
+		<main class="flex-1 flex flex-col px-4 sm:px-8 md:px-16 py-8 sm:py-12 md:py-16">
+			<div class="max-w-[880px] flex flex-col gap-8 sm:gap-12 md:gap-16">
 				<!-- Page Header -->
 				<header class="flex flex-col gap-4">
-					<h1 class="font-display text-[56px] italic tracking-[-1.5px] text-[var(--color-text-primary)]">Speaking Engagements</h1>
+					<h1 class="font-display text-[36px] sm:text-[44px] md:text-[56px] italic tracking-[-1px] sm:tracking-[-1.2px] md:tracking-[-1.5px] text-[var(--color-text-primary)]">Speaking Engagements</h1>
 					<p class="font-body text-[18px] leading-[1.5] text-[var(--color-text-secondary)]">Sharing knowledge on AI, sustainability, and modern development practices at conferences worldwide</p>
 				</header>
 
@@ -68,11 +68,11 @@ function formatDate(date: Date) {
 						<!-- Talks List -->
 						<div class="flex flex-col gap-8">
 							{upcomingTalks.map((talk) => (
-								<article class="flex gap-8">
+								<article class="flex flex-col md:flex-row gap-8">
 									{talk.data.heroImage ? (
-										<Image src={talk.data.heroImage} alt={talk.data.conference} width={200} height={120} class="w-[200px] h-[120px] object-cover shrink-0" />
+										<Image src={talk.data.heroImage} alt={talk.data.conference} width={200} height={120} class="w-full md:w-[200px] h-auto md:h-[120px] object-cover shrink-0" />
 									) : (
-										<div class="w-[200px] h-[120px] bg-[var(--color-divider)] shrink-0"></div>
+										<div class="w-full md:w-[200px] h-[120px] md:h-[120px] bg-[var(--color-divider)] shrink-0"></div>
 									)}
 									<div class="flex flex-col gap-3">
 										<time class="font-mono text-[13px] text-[var(--color-text-muted)]">{formatDate(talk.data.date)}</time>
@@ -105,11 +105,11 @@ function formatDate(date: Date) {
 						<!-- Talks List -->
 						<div class="flex flex-col gap-8">
 							{pastTalksByYear[year].map((talk) => (
-								<article class="flex gap-8">
+								<article class="flex flex-col md:flex-row gap-8">
 									{talk.data.heroImage ? (
-										<Image src={talk.data.heroImage} alt={talk.data.conference} width={200} height={120} class="w-[200px] h-[120px] object-cover shrink-0" />
+										<Image src={talk.data.heroImage} alt={talk.data.conference} width={200} height={120} class="w-full md:w-[200px] h-auto md:h-[120px] object-cover shrink-0" />
 									) : (
-										<div class="w-[200px] h-[120px] bg-[var(--color-divider)] shrink-0"></div>
+										<div class="w-full md:w-[200px] h-[120px] md:h-[120px] bg-[var(--color-divider)] shrink-0"></div>
 									)}
 									<div class="flex flex-col gap-3">
 										<time class="font-mono text-[13px] text-[var(--color-text-muted)]">{formatDate(talk.data.date)}</time>
