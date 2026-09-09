@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1040" viewBox="0 0 1200 1040" role="img" aria-labelledby="title desc">
+<title id="title">The recurring work of operating software</title><desc id="desc">Proposed operations for the shipping progress bar. Each action has a permitted scope.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<rect width="1200" height="1040" rx="12" fill="#0b0f10"/>
+<text x="44" y="42" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">G/</text>
+<text x="101" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="start">AI SOFTWARE FACTORY</text>
+<text x="1156" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="end">09 / 12</text>
+<text x="44" y="104" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="650" text-anchor="start">The recurring work of operating software</text>
+<text x="44" y="145" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Proposed operations for the shipping progress bar. Each action has a permitted scope.</text>
+<line x1="44" y1="170" x2="1156" y2="170" stroke="#3b4648" stroke-width="1"/>
+<rect x="44" y="207" width="212" height="106" rx="9" fill="#171d1e" stroke="#83a2ff" stroke-width="1.5"/>
+<text x="59" y="246" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" text-anchor="start">Minicart error</text>
+<text x="59" y="282" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Support report</text>
+<line x1="150" y1="313" x2="150" y2="341" stroke="#83a2ff" stroke-width="2"/>
+<rect x="269" y="207" width="212" height="106" rx="9" fill="#171d1e" stroke="#83a2ff" stroke-width="1.5"/>
+<text x="284" y="246" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" text-anchor="start">Carrier config edit</text>
+<text x="284" y="282" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Existing admin</text>
+<line x1="375" y1="313" x2="375" y2="341" stroke="#83a2ff" stroke-width="2"/>
+<rect x="494" y="207" width="212" height="106" rx="9" fill="#171d1e" stroke="#83a2ff" stroke-width="1.5"/>
+<text x="509" y="246" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" text-anchor="start">Country mismatch</text>
+<text x="509" y="282" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Checkout support</text>
+<line x1="600" y1="313" x2="600" y2="341" stroke="#83a2ff" stroke-width="2"/>
+<rect x="719" y="207" width="212" height="106" rx="9" fill="#171d1e" stroke="#83a2ff" stroke-width="1.5"/>
+<text x="734" y="246" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" text-anchor="start">Cart reload failure</text>
+<text x="734" y="282" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Monitoring detects</text>
+<line x1="825" y1="313" x2="825" y2="341" stroke="#83a2ff" stroke-width="2"/>
+<rect x="944" y="207" width="212" height="106" rx="9" fill="#171d1e" stroke="#83a2ff" stroke-width="1.5"/>
+<text x="959" y="246" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" text-anchor="start">Retire the offer</text>
+<text x="959" y="282" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Owner decision</text>
+<line x1="1050" y1="313" x2="1050" y2="341" stroke="#83a2ff" stroke-width="2"/>
+<line x1="150" y1="341" x2="1050" y2="341" stroke="#83a2ff" stroke-width="2"/>
+<line x1="600" y1="341" x2="600" y2="376" stroke="#83a2ff" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="244" y="376" width="712" height="106" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="600" y="412" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle">AGENT · Gather evidence and diagnose</text>
+<text x="600" y="449" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="middle">Cart data · Carrier settings · Tax · Country · Currency · Access</text>
+<line x1="600" y1="482" x2="600" y2="511" stroke="#ae9cff" stroke-width="2"/>
+<line x1="225" y1="511" x2="975" y2="511" stroke="#ae9cff" stroke-width="2"/>
+<line x1="225" y1="511" x2="225" y2="545" stroke="#ae9cff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="600" y1="511" x2="600" y2="545" stroke="#ae9cff" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="975" y1="511" x2="975" y2="545" stroke="#ae9cff" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="44" y="545" width="362" height="252" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="64" y="578" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">READ-ONLY DIAGNOSIS</text>
+<text x="64" y="620" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="start">Explain the mismatch</text>
+<text x="64" y="660" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Compare cart data and rates.</text>
+<text x="64" y="691" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Check current carrier settings.</text>
+<text x="64" y="722" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Make no service changes.</text>
+<text x="64" y="774" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="600" text-anchor="start">Report to the owner</text>
+<line x1="225" y1="797" x2="225" y2="835" stroke="#d6fa00" stroke-width="2"/>
+<rect x="419" y="545" width="362" height="252" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="439" y="578" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">PROPOSED CHANGE</text>
+<text x="439" y="620" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="start">Prepare a correction</text>
+<text x="439" y="660" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Accepted intent → validation</text>
+<text x="439" y="691" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">→ authorized delivery.</text>
+<text x="439" y="722" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Retest coupons and eligibility.</text>
+<text x="439" y="774" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="600" text-anchor="start">Owner decides by risk</text>
+<line x1="600" y1="797" x2="600" y2="835" stroke="#d6fa00" stroke-width="2"/>
+<rect x="794" y="545" width="362" height="252" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="814" y="578" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">AUTHORIZED RUNBOOK</text>
+<text x="814" y="620" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="start">Run within policy</text>
+<text x="814" y="660" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Check the cart reload failure.</text>
+<text x="814" y="691" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Run only preapproved steps.</text>
+<text x="814" y="722" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Observe cart refresh errors.</text>
+<text x="814" y="774" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="600" text-anchor="start">Service owner sets limits</text>
+<line x1="975" y1="797" x2="975" y2="835" stroke="#d6fa00" stroke-width="2"/>
+<line x1="225" y1="835" x2="975" y2="835" stroke="#d6fa00" stroke-width="2"/>
+<line x1="600" y1="835" x2="600" y2="872" stroke="#d6fa00" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="164" y="872" width="872" height="80" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="600" y="904" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="middle">Outside scope, missing evidence, or conflicting signals? Stop and escalate.</text>
+<text x="600" y="934" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="middle">A named human decides the next action. Record the decision and outcome.</text>
+<line x1="44" y1="982" x2="1156" y2="982" stroke="#3b4648" stroke-width="1"/>
+<text x="44" y="1009" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Illustrative operating workflow. The PR record does not establish deployment or production outcomes.</text>
+</svg>

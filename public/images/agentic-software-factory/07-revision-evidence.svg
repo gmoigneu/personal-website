@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1030" viewBox="0 0 1200 1030" role="img" aria-labelledby="title desc">
+<title id="title">Route the change according to risk</title><desc id="desc">Proposed policy. This is not a description of Dispatch or a replica of Meta&#x27;s workflow.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<rect width="1200" height="1030" rx="12" fill="#0b0f10"/>
+<text x="44" y="42" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">G/</text>
+<text x="101" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="start">AI SOFTWARE FACTORY</text>
+<text x="1156" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="end">07 / 12</text>
+<text x="44" y="104" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="650" text-anchor="start">Route the change according to risk</text>
+<text x="44" y="145" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Proposed policy. This is not a description of Dispatch or a replica of Meta&#x27;s workflow.</text>
+<line x1="44" y1="170" x2="1156" y2="170" stroke="#3b4648" stroke-width="1"/>
+<rect x="44" y="192" width="1112" height="78" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="66" y="222" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">HUMAN · APPROVED POLICY</text>
+<text x="66" y="253" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Define eligibility, required checks, review owners, deadlines, and stop conditions.</text>
+<line x1="600" y1="270" x2="600" y2="300" stroke="#d6fa00" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="44" y="300" width="1112" height="90" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="66" y="334" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" text-anchor="start">CURRENT REVISION AND EVIDENCE</text>
+<text x="66" y="367" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Assess impact, reversibility, context, and the results of required checks.</text>
+<line x1="600" y1="390" x2="600" y2="420" stroke="#ae9cff" stroke-width="2.5"/>
+<line x1="216" y1="420" x2="984" y2="420" stroke="#3b4648" stroke-width="2.5"/>
+<line x1="216" y1="420" x2="216" y2="450" stroke="#ae9cff" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="44" y="450" width="344" height="290" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="64" y="480" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" text-anchor="start">QUALIFYING LOW RISK</text>
+<text x="64" y="522" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="start">Automatic path</text>
+<text x="64" y="562" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Within the approved scope.</text>
+<text x="64" y="592" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">All required checks pass.</text>
+<text x="64" y="622" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Evidence is complete.</text>
+<line x1="64" y1="645" x2="368" y2="645" stroke="#3b4648" stroke-width="1"/>
+<text x="64" y="674" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" text-anchor="start">MAY PROCEED AUTOMATICALLY</text>
+<text x="64" y="700" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">No extra manual approval</text>
+<text x="64" y="728" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">when policy permits it.</text>
+<line x1="216" y1="740" x2="216" y2="770" stroke="#ae9cff" stroke-width="2.5"/>
+<line x1="600" y1="420" x2="600" y2="450" stroke="#d6fa00" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="428" y="450" width="344" height="290" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="448" y="480" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" text-anchor="start">BOUNDED RISK</text>
+<text x="448" y="522" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="start">Deferred review</text>
+<text x="448" y="562" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Explicit policy allows deferral.</text>
+<text x="448" y="592" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">All required checks pass.</text>
+<text x="448" y="622" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Named owner and deadline.</text>
+<line x1="448" y1="645" x2="752" y2="645" stroke="#3b4648" stroke-width="1"/>
+<text x="448" y="674" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" text-anchor="start">HUMAN REVIEW STILL REQUIRED</text>
+<text x="448" y="700" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Proceed only within that</text>
+<text x="448" y="728" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">permission. Track the review.</text>
+<line x1="600" y1="740" x2="600" y2="770" stroke="#d6fa00" stroke-width="2.5"/>
+<line x1="984" y1="420" x2="984" y2="450" stroke="#d6fa00" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="812" y="450" width="344" height="290" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="832" y="480" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" text-anchor="start">MATERIAL RISK OR EXCEPTION</text>
+<text x="832" y="522" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="start">Hold the change</text>
+<text x="832" y="562" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Failed checks or material risk.</text>
+<text x="832" y="592" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Missing evidence or a change</text>
+<text x="832" y="622" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">outside the approved scope.</text>
+<line x1="832" y1="645" x2="1136" y2="645" stroke="#3b4648" stroke-width="1"/>
+<text x="832" y="674" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" text-anchor="start">HUMAN OR SPECIALIST REVIEW</text>
+<text x="832" y="700" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Wait for the owner&#x27;s decision.</text>
+<text x="832" y="728" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Failed checks block progress.</text>
+<line x1="984" y1="740" x2="984" y2="770" stroke="#d6fa00" stroke-width="2.5"/>
+<line x1="216" y1="770" x2="984" y2="770" stroke="#3b4648" stroke-width="2.5"/>
+<line x1="600" y1="770" x2="600" y2="800" stroke="#ae9cff" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="44" y="800" width="1112" height="161" rx="9" fill="#171d1e" stroke="#3b4648" stroke-width="1.5"/>
+<text x="66" y="833" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">KEEP THE RECORD AND REASSESS</text>
+<text x="66" y="870" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Record the revision, configuration, checks, decision, and accountable owner.</text>
+<text x="66" y="903" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Reassess when the change or evidence changes. Monitor outcomes after delivery.</text>
+<text x="66" y="936" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Withdraw automation when its conditions no longer hold.</text>
+<line x1="44" y1="972" x2="1156" y2="972" stroke="#3b4648" stroke-width="1"/>
+<text x="44" y="999" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Required automated checks remain required on every path. A failed check cannot authorize progress.</text>
+</svg>

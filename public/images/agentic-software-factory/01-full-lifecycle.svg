@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1020" viewBox="0 0 1200 1020" role="img" aria-labelledby="title desc">
+<title id="title">The full software development lifecycle</title><desc id="desc">Nine responsibilities. Work can return to an earlier decision.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<rect width="1200" height="1020" rx="12" fill="#0b0f10"/>
+<text x="44" y="42" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">G/</text>
+<text x="101" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="start">AI SOFTWARE FACTORY</text>
+<text x="1156" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="end">01 / 12</text>
+<text x="44" y="104" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="650" text-anchor="start">The full software development lifecycle</text>
+<text x="44" y="145" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Nine responsibilities. Work can return to an earlier decision.</text>
+<line x1="44" y1="170" x2="1156" y2="170" stroke="#3b4648" stroke-width="1"/>
+<text x="44" y="200" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="600" text-anchor="start">UNDERSTAND AND DESIGN</text>
+<rect x="44" y="220" width="352" height="150" rx="9" fill="#171d1e" stroke="#3b4648" stroke-width="1.5"/>
+<text x="64" y="249" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">01</text>
+<text x="64" y="286" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Establish intent</text>
+<text x="64" y="321" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Agree on the problem</text>
+<text x="64" y="350" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Stakeholder + product</text>
+<rect x="424" y="220" width="352" height="150" rx="9" fill="#171d1e" stroke="#3b4648" stroke-width="1.5"/>
+<text x="444" y="249" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">02</text>
+<text x="444" y="286" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Write the specification</text>
+<text x="444" y="321" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Define behavior and limits</text>
+<text x="444" y="350" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Product + design + engineering</text>
+<rect x="804" y="220" width="352" height="150" rx="9" fill="#171d1e" stroke="#3b4648" stroke-width="1.5"/>
+<text x="824" y="249" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">03</text>
+<text x="824" y="286" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Challenge the solution</text>
+<text x="824" y="321" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Examine choices and risks</text>
+<text x="824" y="350" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Senior engineer + specialists</text>
+<text x="44" y="410" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="600" text-anchor="start">IMPLEMENT AND EXAMINE</text>
+<rect x="44" y="430" width="352" height="150" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="64" y="459" fill="#ae9cff" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">04</text>
+<text x="64" y="496" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Implement the change</text>
+<text x="64" y="531" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Write code and routine tests</text>
+<text x="64" y="560" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Engineer / coding agent</text>
+<rect x="424" y="430" width="352" height="150" rx="9" fill="#171d1e" stroke="#3b4648" stroke-width="1.5"/>
+<text x="444" y="459" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">05</text>
+<text x="444" y="496" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Review the work</text>
+<text x="444" y="531" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Investigate potential defects</text>
+<text x="444" y="560" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Senior engineer</text>
+<rect x="804" y="430" width="352" height="150" rx="9" fill="#171d1e" stroke="#3b4648" stroke-width="1.5"/>
+<text x="824" y="459" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">06</text>
+<text x="824" y="496" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Assess security</text>
+<text x="824" y="531" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Check access and data risks</text>
+<text x="824" y="560" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Security + engineering</text>
+<text x="44" y="620" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="600" text-anchor="start">VALIDATE, DELIVER, AND RUN</text>
+<rect x="44" y="640" width="352" height="150" rx="9" fill="#171d1e" stroke="#3b4648" stroke-width="1.5"/>
+<text x="64" y="669" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">07</text>
+<text x="64" y="706" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Test and validate</text>
+<text x="64" y="741" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Check behavior and user needs</text>
+<text x="64" y="770" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">QA + engineering + product</text>
+<rect x="424" y="640" width="352" height="150" rx="9" fill="#171d1e" stroke="#3b4648" stroke-width="1.5"/>
+<text x="444" y="669" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">08</text>
+<text x="444" y="706" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Deliver the change</text>
+<text x="444" y="741" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Release, observe, recover</text>
+<text x="444" y="770" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Platform + service owner</text>
+<rect x="804" y="640" width="352" height="150" rx="9" fill="#171d1e" stroke="#3b4648" stroke-width="1.5"/>
+<text x="824" y="669" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">09</text>
+<text x="824" y="706" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Operate and maintain</text>
+<text x="824" y="741" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Fix, patch, upgrade, retire</text>
+<text x="824" y="770" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Operations + engineering</text>
+<rect x="44" y="850" width="1112" height="80" rx="9" fill="#0b0f10" stroke="#efb47f" stroke-width="1.5"/>
+<text x="65" y="899" fill="#efb47f" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="start">Product + operating results</text>
+<line x1="398" y1="890" x2="467" y2="890" stroke="#efb47f" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="490" y="899" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="start">Strategy</text>
+<line x1="621" y1="890" x2="703" y2="890" stroke="#efb47f" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="726" y="899" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="start">New or revised intent</text>
+<line x1="44" y1="962" x2="1156" y2="962" stroke="#3b4648" stroke-width="1"/>
+<text x="44" y="989" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Tasks overlap. A person may hold several roles. Existing automation can support every stage.</text>
+</svg>

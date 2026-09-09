@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img" aria-labelledby="title desc">
+<title id="title">Release, observe, recover</title><desc id="desc">Proposed shipping-feature lifecycle. These are release plans, not deployed results.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<rect width="1200" height="1000" rx="12" fill="#0b0f10"/>
+<text x="44" y="42" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">G/</text>
+<text x="101" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="start">AI SOFTWARE FACTORY</text>
+<text x="1156" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="end">08 / 12</text>
+<text x="44" y="104" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="650" text-anchor="start">Release, observe, recover</text>
+<text x="44" y="145" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Proposed shipping-feature lifecycle. These are release plans, not deployed results.</text>
+<line x1="44" y1="170" x2="1156" y2="170" stroke="#3b4648" stroke-width="1"/>
+<rect x="44" y="195" width="1112" height="108" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="66" y="227" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">HUMAN · SERVICE OWNER DEFINES THE PERMITTED ACTION</text>
+<text x="66" y="262" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Name code and existing carrier settings, rollout limits, observation window, and recovery actions.</text>
+<rect x="44" y="345" width="254" height="184" rx="9" fill="#171d1e" stroke="#3b4648" stroke-width="1.5"/>
+<text x="61" y="377" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">INPUT</text>
+<text x="61" y="413" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Accepted</text>
+<text x="61" y="443" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">revision</text>
+<text x="61" y="478" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Linked checks</text>
+<text x="61" y="507" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">and decisions</text>
+<line x1="298" y1="437" x2="330" y2="437" stroke="#ae9cff" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="330" y="345" width="254" height="184" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="347" y="377" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">AGENT</text>
+<text x="347" y="413" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Check</text>
+<text x="347" y="443" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">environment</text>
+<text x="347" y="478" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Existing carrier rules</text>
+<text x="347" y="507" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">and tax settings</text>
+<line x1="584" y1="437" x2="616" y2="437" stroke="#ae9cff" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="616" y="345" width="254" height="184" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="633" y="377" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">AGENT</text>
+<text x="633" y="413" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Run approved</text>
+<text x="633" y="443" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">rollout</text>
+<text x="633" y="478" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Use a tool that limits</text>
+<text x="633" y="507" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">the permitted action</text>
+<line x1="870" y1="437" x2="902" y2="437" stroke="#ae9cff" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="902" y="345" width="254" height="184" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="919" y="377" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">AGENT</text>
+<text x="919" y="413" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Observe</text>
+<text x="919" y="443" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">results</text>
+<text x="919" y="478" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Cart and checkout</text>
+<text x="919" y="507" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">shipping decisions</text>
+<path d="M 1029 529 L 1029 561 L 984 561" fill="none" stroke="#ae9cff" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="984" y1="561" x2="984" y2="597" stroke="#ae9cff" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="812" y="597" width="344" height="119" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="834" y="631" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">CONDITIONS HOLD</text>
+<text x="834" y="668" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Continue within the</text>
+<text x="834" y="697" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">approved rollout limits.</text>
+<path d="M 984 561 L 216 561 L 216 597" fill="none" stroke="#d6fa00" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="44" y="597" width="344" height="119" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="66" y="631" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" text-anchor="start">CONDITIONS FAIL OR ARE UNCLEAR</text>
+<text x="66" y="668" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Pause. Preserve the evidence.</text>
+<text x="66" y="697" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Escalate outside the policy.</text>
+<line x1="388" y1="656.5" x2="428" y2="656.5" stroke="#d6fa00" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="428" y="597" width="344" height="119" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="450" y="631" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">AUTHORIZED RECOVERY</text>
+<text x="450" y="668" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Disable the bar or restore</text>
+<text x="450" y="697" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">the prior module version.</text>
+<path d="M 600 716 L 600 771" fill="none" stroke="#d6fa00" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="44" y="771" width="1112" height="136" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="66" y="807" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="600" text-anchor="start">RECOVERY HAS LIMITS</text>
+<text x="66" y="844" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Keep existing carrier configuration and placed orders intact during approved recovery.</text>
+<text x="66" y="877" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">The bar reuses cart customer data. It introduces no separate HTTP requests.</text>
+<line x1="44" y1="942" x2="1156" y2="942" stroke="#3b4648" stroke-width="1"/>
+<text x="44" y="969" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Proposed monitoring covers cart-section errors, bar/carrier mismatches, and checkout completion.</text>
+</svg>

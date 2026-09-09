@@ -1,0 +1,525 @@
+---
+title: "From coding agents to an agentic software factory"
+description: "What engineering leaders should build around coding agents across intent, validation, operations, and strategy, with people accountable for decisions."
+pubDate: 2026-09-09T12:00:00Z
+---
+
+Software development starts with a problem someone needs solved. It continues for as long as people use, operate, and maintain the software. Writing the code is only one task within that longer responsibility.
+
+The software development lifecycle, or SDLC, covers the work of turning that problem into running software and keeping it running well. The teams and job titles vary, but the work always includes several distinct tasks.
+
+1. **Establish intent.** Investigate the problem, identify the people affected, and agree on the outcome worth pursuing. Stakeholders and product managers decide why the work deserves investment, with evidence from users and the business.
+
+2. **Write the specification.** Describe the intended behavior, constraints, exceptions, and conditions for acceptance. Product managers, designers, and engineers turn the agreed intent into a proposal that someone can implement and verify.
+
+3. **Challenge the proposed solution.** Examine the design, dependencies, cost, and failure modes before committing to an approach. Senior engineers bring technical judgment, with input from security, QA, and operations where the change needs it.
+
+4. **Implement the change.** Write or modify the code, configuration, and associated tests or even infrastructure. Work within the system's conventions and resolve the technical details needed to make the specified behavior work.
+
+5. **Review the work.** Examine the implementation against the specification and the surrounding system. Senior engineers assess potential defects, maintenance consequences, and risks that could change the decision to accept it.
+
+6. **Assess security.** Check how the change affects access, data handling, dependencies, and exposure to misuse. Security specialists and engineers investigate findings and decide whether the protections are adequate.
+
+7. **Test and validate.** Exercise the behavior, including failure paths and realistic user journeys. QA and engineers establish the technical evidence. Product managers and users help judge whether the result answers the original need.
+
+8. **Deliver the change.** Prepare the release, verify the environment, deploy, and check the result. Platform engineers and service owners establish the rollout conditions and the recovery plan if something goes wrong.
+
+9. **Operate and maintain it.** Monitor the service, investigate incidents, fix defects, patch dependencies, and manage upgrades. Operations and engineering teams keep the software usable, reliable, and supportable until its retirement.
+
+These tasks overlap. Security influences the design. Testing happens during implementation. An incident can send the team back to the specification. Treat this list as a map of responsibilities, not a requirement to pass work through nine separate departments.
+
+The results also inform what comes next. Product analytics, customer research, support reports, and operating experience help leaders decide what to improve, leave alone, or stop. That strategic work feeds the next round of intent.
+
+I want AI to support this whole lifecycle, with people accountable for the judgments and decisions within it.
+
+[![Nine SDLC responsibilities, each with its human roles. Intent, specification, challenge, implementation, review, security, validation, delivery, and operations. Product and operating results inform strategy, which returns to intent. These tasks overlap.](/images/agentic-software-factory/01-full-lifecycle.png)](/images/agentic-software-factory/01-full-lifecycle.svg)
+
+*Software development includes the work before implementation, after release, and throughout the life of the product.*
+
+## Place the coding agent within the lifecycle
+
+For this manifesto, take capable coding agent-led implementation as a given. With a clear task, the right code, and a way to test, the coding agent can produce the implementation and handle routine checks. I expect that capability to keep improving. Our job as engineering leaders is to extend AI into the rest of the software development lifecycle.
+
+Claude Opus 4.5 arrived on November 24, 2025. It gives us a useful starting point for this discussion, though no single release establishes that every coding problem is solved. [Anthropic's release announcement](https://www.anthropic.com/news/claude-opus-4-5)
+
+Coding may never have been your main constraint. You may already spend more time choosing priorities or coordinating a release. Those activities contain work worth giving to agents too.
+
+A complete factory connects these tasks. The coding agent receives accepted intent and a specification. Its output enters review and validation, then delivery and operation. What happens in production informs the next decision. Each workflow needs the tools and evidence to do its job, with a person accountable for its decisions.
+
+That is a substantial investment to fully reinvent the cycle. Start with one workflow and build out from there.
+
+## Expand in four directions
+
+Put the coding agent in the center of the map.
+
+To the left, expand into **intent and specification**. Help product managers and designers investigate the problem, settle the intended behavior, and give the coding agent a clear task.
+
+To the right, expand into **validation and testing**. Establish what the change does, select its review path by risk, and highlight the concerns that need human judgment.
+
+Below, expand into **delivery and operations**. This includes deployment, maintenance, patching, upgrades, observability, incident response, and recovery. Software keeps requiring work for as long as people depend on it.
+
+Above, expand into **strategy**. Use evidence from customers, the product, and the running system to develop hypotheses about what to improve next. Those hypotheses return to the left as new intent.
+
+[![The coding agent sits in the center. Intent and specification are left, review and testing right, delivery and operations below, and strategy above. Product and operating evidence feeds strategy. Priorities return to intent.](/images/agentic-software-factory/02-four-directions.png)](/images/agentic-software-factory/02-four-directions.svg)
+
+*Four areas of investment, connected by evidence and decisions. Dashed arrows show expansion. Solid arrows show feedback.*
+
+People will work across these directions. Security should contribute to specifications that affect sensitive data. Operations should challenge a design with no workable recovery plan. A failed test may send a question back to the product manager, and a support ticket can start a change that never appeared on the roadmap.
+
+Draw those return paths on the map. A production incident can become a test that protects the next release. Customer research can show that a technically successful feature failed to solve the problem it was built for.
+
+Anthropic's AI-Native SDLC playbook describes a similar lifecycle, connected by saved work records, automated controls, and human decisions. I use it as a design reference. Its recommendations do not establish that a particular implementation will improve your results. [The AI-Native SDLC playbook](https://claude.com/blog/the-ai-native-sdlc-playbook)
+
+I include product strategy in the map because choosing what to build deserves as much attention as carrying out the choice.
+
+Fund a workflow with a defined result. For PR review, that might be a set of classified findings linked to the changed code, ready for an engineer to investigate. Specify what starts the review, which evidence it receives, and what happens if it cannot finish.
+
+A workflow might need one agent, several specialist passes, or mostly conventional automation. Another agent on the diagram is easy while making its output useful to the next person takes work.
+
+## Left. Make intent clear enough to act on
+
+An agent can implement a mistaken assumption very efficiently. The left side of the factory is where the team finds and questions those assumptions before they become code.
+
+Use a free-shipping progress bar as the running example. In my Magento demo, the request was to place it above the minicart's item list and update it as the cart changes. At a configured threshold of \$50, a \$30 subtotal should show 60% progress and \$20 remaining. Exactly \$50 should qualify, subject to the carrier's other conditions.
+
+The implementation and Dispatch review are real. The customer-discovery scenarios and proposed operating and measurement workflows below explain how I would extend that work across the lifecycle.
+
+That request reaches into the storefront, cart, checkout, and admin application. It depends on which promotions apply, how the store calculates shipping, and what the application caches. A bar that promises free shipping while checkout adds a delivery charge has failed, even if the component looks exactly like the design.
+
+Give an agent the investigation to prepare. Have it inspect the cart journey, find the existing shipping and promotion rules, and collect relevant support reports and customer research. Ask whether the store already offers free shipping and whether the request changes that offer or only makes it visible. Return the evidence and unresolved questions, with links so the product manager can check the work.
+
+The product manager is responsible for defining the problem. The stakeholder sets the business objective and constraints. A designer examines how the change fits the user's work. They need to settle their disagreements before the coding agent receives an instruction that pretends those disagreements don't exist.
+
+### Preserve the source of the request
+
+Keep the original request and its evidence. A product manager should be able to open the support ticket or research note behind an agent's conclusion. Label the agent's interpretations separately.
+
+Suppose shoppers ask support when delivery becomes free. Those questions are evidence of confusion. Believing that confusion causes abandoned carts is an explanation that still needs checking. A progress bar is a proposed solution. Keep those statements separate, and do not turn them into a claim that the bar will increase sales.
+
+When an agent turns an explanation into a fact, it can send the team off to implement the wrong solution. A polished specification makes the error harder to spot.
+
+Limit access to the evidence the task needs. Customer records do not become freely shareable because a model is reading them. Keep source links with the findings, so an authorized product manager can check a conclusion without repeating the research.
+
+### Turn the conversation into an accepted intent
+
+Write down the problem the team has chosen to solve, who it affects, and what an improved outcome would look like. Include the constraints, owner, and open questions. Be explicit about what this change will leave alone.
+
+The agent's first useful contribution may be a question. Is the objective to explain an existing shipping offer, increase basket value, or reduce checkout abandonment? Those goals can lead to different designs and measures. If marketing means the basket total before coupons and checkout means the total after discounts, capture that disagreement before it reaches the code.
+
+I would judge this work by how much ambiguity it removes. A long document can still leave the engineer guessing about the one decision that matters. It can also describe an idea nobody has agreed to pursue.
+
+The product owner accepts the intent by confirming that it represents the chosen problem. Technical decisions still need their own examination.
+
+[![Illustrative discovery separates shopper evidence, possible explanations, and a progress-bar proposal. A product owner investigates, rejects, or accepts intent. The feature request supplies the sample cart. A \$30 subtotal reaches 60% of the \$50 threshold, with \$20 remaining. Exactly \$50 meets the threshold, subject to carrier conditions.](/images/agentic-software-factory/03-request-to-intent.png)](/images/agentic-software-factory/03-request-to-intent.svg)
+
+*The discovery conversation is illustrative. The \$30 cart and \$50 threshold come from the real feature request.*
+
+### Develop and challenge the specification
+
+With that agreement in place, use agents to work through the proposed behavior. Have them map the user journey, investigate exceptions, and compare implementation options. Give them the applicable accessibility, security, data, and design requirements so those constraints shape the proposal from the start.
+
+For the shipping bar, the specification must settle what qualifies for free shipping. Exactly \$50 meets the threshold, but discounts, tax, destination, and other promotions can affect eligibility. The product owner confirms the promise. The bar must match the shipping decision at checkout.
+
+Reuse the existing admin settings and shipping calculation. Define how the bar responds when the cart or offer changes, and how cached results stay current and specific to each shopper. The interface must remain accessible, and a failed progress bar must not prevent a purchase.
+
+The agent maps these dependencies and flags unclear rules. A senior engineer checks the impact on cart, checkout, promotions, and caching. QA turns the agreed behavior into acceptance checks. Those decisions give the coding agent a specification it can implement and verify.
+
+
+Agents can investigate those concerns and prepare alternatives for the relevant person. When they uncover an unsettled choice, return it to that owner. Do not let the coding agent quietly choose a product policy because it needs an answer to continue.
+
+Some proposals should stop here. Research may show that a configuration change solves the problem, or that the benefit does not justify the operating cost. Record that decision and close the work. I want a factory that can tell me an implementation is unnecessary.
+
+### Hand the coding agent a usable package
+
+The coding agent needs accepted intent, the current specification, relevant repository guidance, and a way to verify the result. It also needs to know which decisions it can make and which require a return to the owner.
+
+Keep those records linked and versioned. If your team maintains the specification in a ticket or requirements system, use that record. If you also give the agent a repository copy, decide which version governs and how updates reach the other copy. Two plausible specifications are an invitation to implement the wrong one.
+
+Check whether engineers still discover basic product decisions halfway through implementation. Track late requirement changes and rework caused by ambiguity. Compare the delivered behavior with the accepted intent. Those results tell you more than how quickly the agent wrote the specification.
+
+[![A specification review map informed by the reviewed change covers storefront UI, cart and checkout, existing admin settings, promotion rules, cache behavior, and shipping calculations. Owners examine tax, discounts, destinations, currency, and cart refresh. The feature adds no new threshold setting or separate HTTP request. Exactly \$50 meets the sample threshold.](/images/agentic-software-factory/04-challenge-specification.png)](/images/agentic-software-factory/04-challenge-specification.svg)
+
+*The UI crosses six application concerns. Reuse the existing carrier settings and establish how the bar will match actual eligibility.*
+
+## Right. Make risk visible before a decision
+
+On the right side, I want a senior engineer to see the risks that deserve their attention and the evidence needed to judge them.
+
+Use automated checks for questions they can answer reliably. Compile the code, run the tests, check dependencies, and enforce the applicable rules. Alongside those checks, an agent can follow affected code paths and investigate whether the implementation meets the specification.
+
+The review should give the engineer somewhere useful to start. Producing comments is a poor measure of success.
+
+### Start with the consequences of the change
+
+Risk depends on what the change can affect. A progress bar can use a different eligibility calculation from the carrier, ignore an excluded destination, or fail the cart data request when it cannot format a message. Review needs to follow those consequences beyond the UI component.
+
+Follow the consequences of the change. Establish which systems it can affect, what the tests cover, and how recovery would work. A reassuring PR title and a small diff can still hide a serious problem.
+
+Lead the review with the risks that could change the merge decision. Point to the relevant code and explain the failure condition. Tell the engineer what could happen and what supports that claim. If the agent cannot establish whether the condition exists, say what to check.
+
+Severity and confidence answer different questions. A possible checkout failure can have severe consequences even when the reviewer is unsure whether the triggering condition exists. The engineer needs both facts to decide what to investigate.
+
+[![A paraphrase of the tax warning in the Dispatch shipping-feature review. With a \$50 threshold, a \$45.45 subtotal before tax becomes \$54.54 including tax. Under the reported tax-inclusive configuration, the carrier offers free shipping while the bar shows 90% and asks for another \$4.55. The finding identifies the threshold calculation and related carrier logic. Severity, reported evidence, and the unresolved reproduction step remain distinct.](/images/agentic-software-factory/05-risk-finding.png)](/images/agentic-software-factory/05-risk-finding.svg)
+
+*Dispatch reports a tax-calculation mismatch and identifies the code paths behind it. The scenario still needs reproduction in the application.*
+
+### Dispatch's review of the real change
+
+The proposed change adds the progress bar as a Magento module. It reuses the existing cart customer-data response and carrier settings. That keeps the proposed UI connected to an existing update mechanism instead of adding a separate request or another admin setting.
+
+The main Dispatch review records 13 files checked, one warning, three minor points, and one nitpick. It also records checks that supported the implementation, including the component's placement above the item list. This gives the engineer both concerns and work already examined.
+
+The warning concerns tax. Dispatch traced a difference between the subtotal used by the bar and the amount compared by the shipping carrier. Its example uses a \$50 threshold with \$45.45 before tax and \$54.54 including tax. Under the tax-inclusive configuration described in the finding, the carrier offers free shipping while the bar reports 90% progress and asks for another \$4.55. The review links that disagreement to the relevant calculation and configuration paths.
+
+That gives the senior engineer a specific case to investigate. Reproduce the two results under that store configuration, establish the correct rule, and make a regression check compare the bar with the carrier's decision. Those are the next actions I would want. They are not completed fixes in this record.
+
+Another finding concerns the boundary around an optional feature. The plugin adds progress data to the cart response through an unguarded call. Dispatch points out that an exception during later processing, such as currency formatting, could fail the whole cart section's load or refresh, affecting the item list, count, and subtotal along with the bar. The proposed correction is to contain the widget's failure.
+
+Dispatch labels that concern minor. A senior engineer still has to assess its consequence in this application. The label helps route attention; the failure condition and affected behavior support the decision. I would want a failure-path check showing that the cart still loads when the optional progress calculation fails.
+
+The review also flags a success message shown for a destination the carrier excludes, and a numeric remaining amount in base currency beside a formatted amount in display currency. Each gives the engineer a different configuration to examine.
+
+[![The Dispatch review records 13 files checked, one warning, three minor points, and one nitpick. Two of four open threads are shown. The warning concerns tax eligibility. A minor finding concerns an optional widget exception failing the cart-section load or refresh. Proposed human investigation leads to correction only if the findings are confirmed. The change remains open on September 9, 2026, with all four threads unresolved.](/images/agentic-software-factory/06-review-decisions.png)](/images/agentic-software-factory/06-review-decisions.svg)
+
+
+### Make findings easy to act on
+
+Keep low-impact cleanup separate from concerns that could change the merge decision, but let the engineer challenge the assigned category. In this review, the rounding nitpick is separate from the tax warning and the minicart failure concern. The useful result is a clear path to the evidence for each concern, with a person responsible for its disposition.
+
+Keep each finding in a discussion with a status and an owner. Link the correction to it. If the engineer dismisses the finding, record why. If they accept a known risk, write down what they accepted and who will handle any follow-up.
+
+Send confirmed defects back to the implementation agent with the reviewer's evidence. Have it add a test that fails on the old behavior and passes after the fix, then submit the changed code for review. Put a limit on this loop. Repeated findings or conflicting reviews need a person's attention before the agents spend another hour arguing through commits.
+
+Tie the review to the revision the agent examined. When the code changes, check which conclusions still hold. Approval of an earlier version cannot certify new behavior that nobody has examined.
+
+Someone reading the merge request later should be able to follow the decision without reconstructing it from chat messages.
+
+### Make review gates conditional on risk
+
+Human approval **should be optional for changes that meet an agreed low-risk policy**. A gate is a condition that work must satisfy before it proceeds. The team decides which conditions can be checked automatically, which require a person, and when a review adds enough value to justify holding the change.
+
+Define the routes before a change arrives. A qualifying low-risk change can pass without a manual approval once its required checks succeed. A policy can permit deferred human review for a bounded class of changes, with a named reviewer and a deadline. A change with material consequences, conflicting evidence, or missing required checks waits for the relevant engineer or specialist. Deferred review needs a way to stop further changes and recover if the reviewer finds a problem.
+
+This applies to the selection of reviews too. A small visual correction need not wait for a pricing specialist if the evidence establishes that pricing is unaffected. A change to eligibility must reach someone who understands the shipping rules. An agent can prepare the routing decision, but it cannot waive a requirement by calling its own change low risk.
+
+Meta describes a production example in its [RADAR paper](https://arxiv.org/abs/2605.30208). Eligible AI-generated changes pass source eligibility, static checks, a risk score, an AI review, and final deterministic validation before automated landing. Its human-authored path distinguishes deferred review from a stricter approval that waives human review entirely. Vetted deterministic transformations can also skip per-change AI review because the transformation was approved beforehand. That exception does not extend to variable AI-generated changes.
+
+The authors report more than 535,000 changes reviewed and 331,000 landed. They also report 35% lower median review wall time than human-reviewed changes. These are observational results from selected changes within Meta's infrastructure. They establish a working example of risk-based automation, not a promise of the same gains in another team. [Study and limitations](https://arxiv.org/html/2605.30208v2#S6)
+
+For our shipping example, define low risk using what can fail, how many shoppers it affects, and how readily the team can recover. Line count and an agent's confidence are insufficient. If a required test cannot run, the change has missing evidence. Route that gap to its owner instead of recording a pass. The reviewed implementation would need that attention before entering an automatic path.
+
+Keep checking the policy after adoption. Sample automatically accepted changes, investigate escaped defects, and track reversions alongside time spent waiting. Tighten or suspend a route when its results worsen. People remain accountable for setting these rules and judging exceptions, even when individual changes proceed without their approval.
+
+[![A proposed review policy routes a current revision according to risk and evidence. Qualifying low-risk changes may proceed automatically after required checks. A bounded class may use deferred human review only under an explicit policy with an owner and deadline. Material risk, failed checks, and missing evidence require a hold for human or specialist review. Record the revision, configuration, checks, and decision. Reassess changes and withdraw automation when outcomes worsen.](/images/agentic-software-factory/07-revision-evidence.png)](/images/agentic-software-factory/07-revision-evidence.svg)
+
+*Make manual gates conditional on risk. The owner sets the policy; required checks still apply to every route.*
+
+### Validate against the real behavior
+
+The PR contains unit tests, but its description says they and Magento's dependency-injection compilation were not run because dependencies were unavailable. It reports syntax and file-format checks instead. The Dispatch review also notes the absence of a CI workflow and coverage gaps for the JavaScript component, layout integration, plugin wiring, and tax-inclusive calculation. Tests written and tests executed are different evidence.
+
+A passing test would still answer only the question encoded in it. A component test supplied with `eligible: true` proves little about whether a real cart qualifies. Exercise the pricing and promotion rules that produce that value, then follow it through the cart and checkout.
+
+Test \$49.99, \$50.00, and \$50.01 against the agreed rule. Add and remove items, apply and remove coupons, change shipping methods and destinations, and edit the threshold in admin while a cart is open. Include excluded products and conflicting promotions. Check that an older response cannot overwrite the result for a newer cart revision.
+
+Upsun Cloud preview environments are a strong fit for these tests. They can clone production's application, services, and data into an isolated sandbox where the proposed change runs. [Preview environments](https://upsun.com/preview-envs/). A script or browser-based agent can exercise the real cart and checkout, compare the bar's promise with the calculated shipping charge, and save assertions, screenshots, and logs as evidence.
+
+Sanitize sensitive customer data before giving reviewers or agents access, and put external payment, email, and fulfillment integrations in test mode. Environment isolation does not replace those controls. [Data sanitization](https://docs.upsun.com/development/sanitize-db.html)
+
+For this implementation, exercise the existing cart-section refresh after adding, removing, and changing items. Check old cached payloads that do not yet contain the new progress field, then verify that a refreshed payload agrees with the carrier's tax, destination, and currency rules. Check failure handling without assuming that reuse of an existing request makes the added work harmless. Test the complete promise, including the shipping charge recorded on a placed order.
+
+Give QA responsibility for deciding what evidence the change needs. Agents can prepare scenarios, run browser and accessibility checks, exercise APIs, and investigate failures. QA specialists judge whether those checks cover the risks, including the behavior that is difficult to automate.
+
+Maintain an independent basis for acceptance. Tests should follow the agreed requirements and relevant failure modes. An agent that implements a change should not be able to weaken the acceptance criteria merely to make its own output pass. Separate review context and protected checks help, though two agents can still share the same mistaken assumption.
+
+Security requires the same attention to evidence. Automated findings need investigation, and an empty report cannot establish that no vulnerability exists. Route sensitive changes to the people who can assess the consequences in the context of the system.
+
+The product manager needs to examine the result too. A correct calculation can still produce a confusing message about eligible items or shipping methods. Have shoppers try the offer, and ask administrators to change it. Compare what they understand with the promise the system will actually honor.
+
+Track which findings lead to corrections and which turn out to be false alarms. Record defects found after release and how long reviews take to reach a decision. Read those measures together. A reviewer that reports nothing may look efficient while missing the problems it exists to find.
+
+## Down. Deliver, operate, and maintain the software
+
+The factory continues after merge.
+
+A release can fail because production has a different configuration, a missing secret, or data the test environment never contained. An application that worked last month can need attention because a certificate expired or a vendor changed an API.
+
+Put this work in the factory's budget and schedule. Otherwise maintenance will keep competing for whatever capacity remains after feature work.
+
+### Build a release workflow that knows what it is releasing
+
+Give the delivery workflow the exact revision to release, its test and review results, and the environment requirements. Specify the checks that must pass and the conditions that require the service owner's decision.
+
+Have an agent prepare the release record from the actual change. Include release notes and any updates the operating instructions need. If deployment fails, use the agent to compare configuration and trace the failure through the logs. Its proposed correction should explain the cause it found and any uncertainty that remains.
+
+Expose deployment through a tool that limits the environment and actions available. Broad production credentials in a general-purpose terminal give the agent much more authority than a release requires. Check the target, revision, and permitted action before execution.
+
+The service owner can authorize a particular rollout once its conditions pass. The agent then executes that rollout and checks the result within the agreed limits. A different revision, wider rollout, or newly discovered risk goes back for a decision. That is a useful division between judgment and execution.
+
+Watch the result after release. For this feature, specify checks for cart updates, checkout completion, and agreement between the shipping promise and final charge. Watch rate-provider calls, request-limit responses, cache behavior, and checkout latency. Define the observation window and stop conditions before enabling the bar for more shoppers.
+
+Release the relevant configuration with the code. Check that the server policy and admin values are active before displaying the offer. Test an open cart across the rollout and verify that a rule change invalidates affected cached results. A successful deployment command tells you very little about whether someone can finish a purchase.
+
+### Treat recovery as part of the plan
+
+Write and test the recovery plan before releasing. Name the last known working version, the action permitted when a release fails, and who takes over if that action does not restore service.
+
+Restoring an earlier application version may be enough. It will not unsend an email, reverse an external transaction, or recover deleted data by itself. The release plan needs to say which effects recovery can undo and which it cannot.
+
+For the shipping bar, distinguish disabling the display from changing the pricing policy. Hiding the widget should leave the established checkout rules working. If the policy itself is wrong, recovery may also require an approved configuration change and cache invalidation. Record what happens to open carts. Already placed orders need their own customer and business decision; a rollback must not silently reprice them.
+
+Give an agent the recovery instructions and have it rehearse them in an appropriate test environment. Check whether the named tools still exist and whether the commands work. Ask it to trace any data changes or external effects that the rollback instructions leave out.
+
+Approve well-understood, reversible recovery actions in advance where policy allows. Destructive actions and uncertain recovery paths need the service owner's decision. A runbook label alone does not make an action safe.
+
+[![A service owner authorizes a proposed rollout after reviewing existing carrier settings and cart customer-data behavior. Agents release within limits and observe cart and checkout decisions. The bar reuses the existing response rather than adding a separate request. Failed conditions trigger a pause and authorized recovery, which can disable the widget or restore the prior module version. Preserve carrier configuration and placed orders. No deployment or recovery is established by the reviewed change.](/images/agentic-software-factory/08-release-recovery.png)](/images/agentic-software-factory/08-release-recovery.svg)
+
+*A proposed release workflow beyond the reviewed change. Widget recovery preserves existing carrier settings and placed orders.*
+
+### Make maintenance a recurring workflow
+
+Connect maintenance to the events that call for it. A support ticket starts a defect investigation. A dependency finding starts a patch assessment. An API retirement notice starts an inventory of affected code. Recurring errors or rising costs can start work even when no customer has filed a ticket.
+
+Use the same path through intent, implementation, and validation that feature work follows. Scale the documentation and approval to the change. A narrow fix may need a short ticket and a regression test. A framework migration needs a plan that a senior engineer can challenge.
+
+Assign the agent the preparation that makes those decisions possible. For a bug, ask for a reproduction. For a dependency update, have it read the release notes, find where the application uses the package, and run the relevant checks. For a migration, ask which parts can move independently and how the old and new behavior will coexist during the transition.
+
+Do not let the version number make the risk decision. A patch can change a critical code path. A major upgrade can be manageable in an application that uses only a small part of the library. Examine the actual use, compatibility evidence, and recovery options.
+
+Low-risk updates can run under an approved policy once the team has enough evidence to trust that workflow. Keep automated checks and human sampling. A new permission requirement, data migration, or unexpected behavior should send the change back to its owner.
+
+Limit how much work a scheduled agent can open. A queue of unreviewed maintenance PRs is still unfinished maintenance. Group compatible updates where useful and slow the schedule when unresolved findings accumulate.
+
+### Give operations agents evidence and a bounded job
+
+Let monitoring detect the service conditions the team has defined. Give the resulting alert to an agent for investigation. Have it collect relevant logs, compare affected environments, and place recent releases on the incident timeline.
+
+An error increase after a release is a clue, not proof of the cause. Keep the observation and the proposed explanation separate. The on-call engineer needs to see what has been checked before deciding whether to roll back or investigate elsewhere.
+
+I would start incident assistance with read-only diagnosis. During an incident, another actor changing the system adds work for the people trying to understand it. Introduce actions later, once the team has defined when they are allowed and how to recover if they fail.
+
+Some incidents fit a tested runbook. When evidence is missing or signals conflict, the agent needs to stop and hand over. Preserve the timeline, commands run, results, and unanswered questions. The engineer taking over should not have to ask what happened while the agent was working.
+
+Keep the incident commander in charge of coordination and the service engineers in charge of technical decisions. Use the agent to maintain the timeline, draft updates for approval, and record follow-up work. Its recommendations enter that existing decision process.
+
+[![Possible operating triggers include a minicart error, an existing carrier-setting edit, a country mismatch, a cart reload failure, and retirement of an offer. Agents collect cart, configuration, and failure evidence. Actions stay within an owner's permitted scope, with escalation for uncertainty or exceptions. This is a proposed operating model, not a record of production incidents.](/images/agentic-software-factory/09-recurring-work.png)](/images/agentic-software-factory/09-recurring-work.svg)
+
+*Proposed operating workflows turn cart errors, carrier-setting changes, and destination mismatches into work with an owner.*
+
+### Turn operating experience into future work
+
+After recovery, turn the lesson into a change someone owns. That might be a regression test, corrected runbook, or product fix. A lesson stored in an incident report will not protect the next release unless it changes the work.
+
+The tax mismatch raised in the review suggests a check worth applying elsewhere. Find other places that display a price or entitlement using a separate calculation from checkout. A cart banner, product-page offer, and email campaign can each repeat the same incorrect assumption. When the team confirms a mismatch, turn it into a reusable test of the pricing contract.
+
+Promotion edits and carrier rate changes also need ongoing attention. Have agents identify which tests, quote assumptions, and cache rules those changes affect. If rate requests spike after a new UI interaction, investigate the trigger and fix the request pattern rather than merely increasing the allowance.
+
+Production evidence can also change investment priorities. A repeated incident may justify retiring a dependency. Rising operating costs may change the economics of a feature. Support work may reveal a customer need that was missing from the roadmap.
+
+A known defect goes left, into the intent for a fix. A recurring problem also goes up, into the discussion about where to invest.
+
+Include retirement too. Have agents inventory usage and dependencies before proposing removal. The owner decides when the service can end and how to support users through the transition. A factory that keeps adding software needs a way to retire it.
+
+## Up. Use evidence to decide what deserves investment
+
+Suppose average order value rises after the team adds the progress bar. Shoppers may be adding useful products to reach free shipping. Smaller orders may also be disappearing because those shoppers abandon checkout. Shipping subsidies could consume the extra margin. The chart alone cannot settle the next product decision.
+
+This is where I want the factory to expand upward. Give agents the work of gathering product evidence, comparing explanations, and preparing hypotheses about what to improve next.
+
+The evidence is spread across the organization. Analytics records behavior. Support hears problems people choose to report. Researchers investigate users' goals, while sales and account teams hear requests from particular customers. Operations sees what the product costs to run and where it fails.
+
+Bring those sources together for the people who decide which customers to serve and where to invest. An agent's recommendation should make its assumptions easy to challenge, not hiding them behind an opaque priority score.
+
+### Start with a defined decision
+
+"Find opportunities in our data" gives an agent plenty of room to produce an attractive report. Give it a decision to inform instead. Specify the product goal, affected users, and time period, along with constraints such as cost, reliability, or customer commitments.
+
+For the hypothetical store, ask whether showing progress toward free shipping improves completed purchases while staying within the agreed shipping budget and margin limits. Compare conversion, basket value, shipping subsidy, abandoned carts, and support reports. Separate eligible destinations and promotion combinations. Have the agent investigate competing explanations, including a concurrent campaign or a change in the mix of shoppers.
+
+Check the measurement itself. A change to event tracking can make a chart move without changing anyone's experience. An increase in recorded errors might reflect better logging. Establish what the measure represents before using it to justify another feature.
+
+The analyst checks the measurement. The researcher investigates what people are trying to do. The product manager decides what the evidence means for the product. The agent should leave enough detail for each person to examine the part they are responsible for.
+
+### Keep customer evidence beside the analytics
+
+Analytics can show that people leave at a particular step. It usually cannot explain their reasons on its own. Some reasons may require an interview, a usability session, or an examination of how the work happens outside the application.
+
+GOV.UK's service guidance recommends using performance data to locate drop-off, then working with a user researcher to understand why it happens. I would apply the same discipline here. Let the signal guide the investigation. [Using performance data to improve your service](https://www.gov.uk/service-manual/measuring-success/using-data-to-improve-your-service-an-introduction)
+
+Preserve disagreement in the evidence. A request from a large customer may matter commercially without representing the needs of everyone else. A frequent complaint may come from an unusual workflow. A quiet group of users may be poorly served even though they never contact support.
+
+For every recommendation, show where the evidence came from, how recent it is, and whose experience it describes. A confident paragraph should not hide a narrow sample.
+
+### Form hypotheses that can be tested
+
+A hypothesis states what you expect a change to do and why. It needs a result that would make you reject the explanation.
+
+For the shipping feature, the hypothesis might be that explaining the remaining eligible spend helps shoppers make a purchase decision and increases completed orders. Define the conversion measure and denominator in advance. Agree how much shipping subsidy is acceptable, how to measure margin after shipping costs, and which checkout failures would stop the experiment.
+
+If the store already offers free shipping at or above \$50, compare showing the bar with keeping the same offer without the bar. Changing the threshold and adding the bar at the same time would make their separate effects harder to establish. A later proposal to move the threshold is a new investment decision, supported by the results and a revised specification.
+
+Have the agent propose alternative explanations and ways to test them. Ask it to check whether the required events are recorded and whether the measure could detect the expected effect. Check proposed experiments against the business rules before exposing users to them.
+
+The product manager and analyst decide whether the evidence will be strong enough to support a decision. A controlled experiment may be appropriate when the product has enough comparable usage. A small internal tool may need observed task sessions, a limited rollout, and careful qualitative follow-up instead.
+
+Microsoft's experimentation guidance calls for a hypothesis the measurements can support or reject. It also includes measures of success, potential harm, and data quality. Agree on those before seeing the results. [Patterns of trustworthy experimentation](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/)
+
+A before-and-after chart does not establish causation. A noisy result does not authorize a wider rollout. The agent should report when the experiment cannot answer the question.
+
+### Make the investment decision explicit
+
+Evidence does not remove trade-offs. A feature can improve a product measure while adding support work. A requested integration can win one customer while making the platform harder to maintain. A reliability project can consume capacity that would otherwise produce a visible feature.
+
+The business stakeholder owns the investment decision. The product leader owns how it fits the product direction. Engineering and operations contribute feasibility, cost, and risk. The decision should record which evidence mattered and which uncertainty the organization accepted.
+
+Use the agent to compare options against the criteria the team agreed on. Ask which assumption would change its recommendation. Include keeping the current behavior, doing less, or retiring a feature among the options it examines.
+
+Cheap recommendations can fill a backlog very quickly. Keep a limit on active work and require an owner before a proposal becomes a commitment. Rejection and stopping must be normal outcomes of this process.
+
+### Return the decision to intent
+
+Once the team chooses an opportunity, turn it into accepted intent. Carry the evidence, expected outcome, constraints, and measurement plan into the next change. The coding agent needs to know why the feature exists and how the team will judge it.
+
+After delivery, compare the result with the hypothesis. Keep unsuccessful experiments in the record. They can prevent the organization from repeating the same proposal with a different title months later.
+
+Reliability belongs in that decision too. Google's SRE guidance uses error budgets, limits on acceptable unreliability, to inform whether feature work should give way to reliability work. Agree in advance how service failures affect priorities, then follow that policy when the conditions occur. [Example error-budget policy](https://sre.google/workbook/error-budget-policy/)
+
+The loop closes when the team uses these results to decide what to continue, change, or stop. Record the decision and its evidence, including when the results support staying with the current plan.
+
+[![A proposed progress-bar experiment separates customer evidence, possible explanations, and an owner-approved hypothesis. The sample threshold is met at \$50; a \$45 qualifying subtotal needs \$5 more. The bar follows existing carrier settings and reuses cart data. Measure conversion, shipping subsidy, margin, and abandonment. Continue, change, stop, or gather more evidence, then return the decision to the next hypothesis.](/images/agentic-software-factory/10-strategy-feedback.png)](/images/agentic-software-factory/10-strategy-feedback.svg)
+
+*A proposed experiment measures completed purchases alongside shipping cost, margin, and customer experience. The PR supplies no customer results.*
+
+## Give the workflows shared foundations
+
+These workflows need to exchange work without losing its meaning. A review agent should be able to find the specification the implementation followed. An operations agent should be able to find the release that changed the service.
+
+I would require every workflow to name its owner, input, permitted actions, and expected result. It also needs to say who receives a failed run. Teams can use different tools while keeping those agreements.
+
+### Keep the current decision and its evidence connected
+
+Save intent, specifications, review findings, release decisions, and operating lessons where the next workflow can find them. Keep their sources linked. Choose a format your team can maintain and your tools can read.
+
+Mark a suggestion as a suggestion until someone accepts it. Record who made the decision and which version of the work it applies to. When that decision changes, link the old record to the new one so an agent cannot mistake an abandoned plan for current instructions.
+
+Give agents a way to report conflicting context. An old specification and a newer customer request may describe incompatible behavior. The product owner needs to resolve that conflict before the agent proceeds.
+
+Assign someone to maintain the service ownership records, constraints, and tool instructions. Remove stale guidance. A long instruction file that nobody maintains can turn an old mistake into a recurring rule.
+
+### Enforce the boundaries outside the prompt
+
+Written instructions explain what the agent should do. Permissions and automated controls constrain what it can do. Use both.
+
+A review agent that only needs to read code should have read access. A maintenance agent that opens a proposed change should not automatically gain deployment authority. A production action should pass through the environment's access controls and the organization's approval policy.
+
+Treat text read from tickets, repositories, logs, and external pages as evidence to inspect. It must not grant the agent new authority. A malicious instruction inside a source file is still part of the material being reviewed.
+
+The software running these jobs needs ordinary failure handling. Events can arrive twice. Jobs can stop halfway through. A retry can repeat an action that already succeeded, and parallel agents can edit the same files.
+
+Record which actions completed. Detect duplicate jobs, limit retries, and decide how to recover from partial failure. Use conventional orchestration to track execution so the agent does not have to infer whether a deployment already happened.
+
+### Evaluate the factory itself
+
+Before increasing an agent's authority, test the workflow on the kinds of work it will receive. Keep cases with useful findings, missed problems, unsupported claims, and failed actions. Include cases where the correct result is to stop and ask for a decision.
+
+Repeat those evaluations when the model, instructions, tools, or context sources change. A workflow is the combination of those parts. Replacing one can change the outcome even when the name of the agent stays the same. Anthropic's evaluation guidance similarly treats the agent and its surrounding tools and instructions as the system under test. [Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents)
+
+Evaluate the job the agent was assigned. The real review supplies candidates for an evaluation set, including tax-dependent eligibility and an exception escaping the widget. Reproduce and establish the expected behavior before treating either as a scored reference case. Include correct implementations too, so an agent does not earn credit simply by calling every pattern a defect.
+
+Set limits on run time, spending, retries, and queued work. Count the human effort spent investigating findings and repairing failed runs. The price of the model call tells you only part of what the workflow costs.
+
+Send failures to the owner and keep a way to disable the workflow. If a model change makes a previously reliable agent worse, the team needs to be able to reduce its authority immediately.
+
+## Keep people accountable for decisions
+
+One person may be the product owner, senior engineer, and service owner in a small team. A larger organization may distribute those responsibilities across several teams. The diagram does not prescribe headcount. It names the judgments somebody still has to make.
+
+The stakeholder decides which business outcome merits investment. The product manager establishes the problem and accepts the intended behavior. Designers and researchers bring evidence about the user experience. Senior engineers judge technical choices and risks. QA defines the validation approach. Security specialists assess relevant security risks. Platform and operations teams establish delivery and recovery conditions. Analysts help determine what product evidence can support.
+
+Involve those people while they can still change the decision. A security review after implementation may uncover a product assumption that should have been challenged in the specification. An operations engineer needs time to examine the recovery plan before release day.
+
+Accountability does not require clicking approve on every action. A service owner can authorize an agent to run a particular recovery procedure under specified conditions. That owner remains responsible for whether the policy is suitable and how its exceptions are handled. State exactly when the agent must hand the decision back.
+
+Budget time for judgment. A senior engineer who owns risk acceptance needs time to investigate the findings. A product manager who owns intent needs to be available when a requirement is unclear. An on-call engineer who owns recovery needs the authority and tools to act. A name in an approval field provides none of that by itself.
+
+People also need to keep practicing the work that informs their judgment. Make room for investigating uncertain cases, rehearsing incidents, and examining technical failures. An approval process has little value when its owners can no longer judge the evidence.
+
+Write down enough of the decision that someone can disagree with it. Keep the reasoning, evidence, and accepted limits. When the result surprises the team, that record helps locate the mistaken assumption.
+
+[![Seven responsibility groups pair agent preparation with human judgment. Stakeholders own investment, product and design own the problem and experience, engineers own technical choices, QA owns validation, security owns security risk, service owners own release and recovery, and analysts own measurement validity.](/images/agentic-software-factory/11-human-judgment.png)](/images/agentic-software-factory/11-human-judgment.svg)
+
+*People can hold several roles. Each decision still needs an accountable owner. Accountability does not require manual approval of every action.*
+
+## Start with one complete workflow
+
+Start with one workflow you can finish and evaluate.
+
+PR risk review is one candidate when engineers already have a functioning implementation process. Preparing evidence for an incident or clarifying incoming product requests may be a better choice elsewhere. Choose work with an owner, a result you can examine, and a failure cost you can contain.
+
+Document how that work happens today. For review, record how engineers find risks, how findings return to the author, and where the process loses time or misses defects. You need that baseline to judge the agent's contribution.
+
+First, have the agent prepare evidence for the established process. Compare its findings with the decisions engineers make. Investigate misses and false alarms before expanding the job. Fix the specific problem, whether it comes from missing context, weak instructions, or a tool the agent cannot use correctly.
+
+Then give it an action the team can verify and recover from. A reviewer might send a confirmed correction back to the coding agent. A maintenance agent might open a dependency update for review. An operations assistant might run a tested diagnostic procedure.
+
+Require evidence across the kinds of work the agent will handle before giving it more authority. Keep the exception route and the ability to take that authority back.
+
+Connect the next workflow when the first one works. A review finding can become an implementation task with its evidence attached. The correction can trigger another review. Later, the same defect can join the evaluation set that tests changes to the reviewer itself.
+
+Measure the complete path for the work you chose. Include elapsed time, human effort, rework, and what happened after release. For product changes, check the intended user outcome too. More generated code or more agent runs cannot establish that the product improved.
+
+Fund the upkeep. Integrations will need maintenance, permissions will need review, and model changes will need evaluation. Someone must respond when the automation fails. Put that work in the plan when you fund the agent.
+
+If a rule or script does the job reliably, use it. If the problem is an unresolved decision between two teams, put that decision in front of its owner. The factory does not need an agent in every box.
+
+[![Start with evidence preparation, then permit bounded action and connect workflows when demonstrated performance supports it. Each expansion needs an owner's policy. Authority can be reduced or disabled. Context, permissions, records, evaluation, cost limits, and failure handling support every stage.](/images/agentic-software-factory/12-earned-authority.png)](/images/agentic-software-factory/12-earned-authority.svg)
+
+*Begin with one useful workflow. Extend its authority when the evidence supports it, and retain the ability to reduce or withdraw it.*
+
+## The commitments of a complete factory
+
+These are the commitments I would expect a CTO to fund and enforce.
+
+### Give every change an explicit purpose
+
+Keep the reason for the work attached to it. The person accepting the result should know which problem it was meant to solve.
+
+### Apply AI across the lifecycle
+
+Choose useful work in product discovery, validation, delivery, operations, and strategy. Give those workflows the investment and attention already going into coding agents.
+
+### Make risk and uncertainty visible
+
+Require findings that explain the consequence, evidence, and uncertainty. An empty report is no guarantee that the change is safe.
+
+### Assign human decision owners
+
+Name who owns intent, technical risk, product behavior, release, and investment. Let those owners define when checks can replace a manual gate and when a change must wait for their judgment. Protect the time they need to decide.
+
+### Match autonomy to the permitted action
+
+Authorize specific actions under stated conditions. Enforce those limits outside the prompt, and return exceptions to the owner.
+
+### Include the work of keeping software alive
+
+Fund recurring maintenance and incident work. Include recovery and retirement. The obligations continue after the feature ships.
+
+### Require learning after delivery
+
+Use product results and operating experience to change the next decision. Keep failed experiments and incident lessons available to the people and agents who follow.
+
+At the next planning meeting, pick one recurring piece of work outside implementation. It could be the PR review that sends an engineer searching through unfamiliar code, or the incident investigation that starts by collecting the same logs again.
+
+Fund a complete workflow for it, including its owner and upkeep. Judge it by whether it helps that person make a better decision. That is where I would put the next investment in the AI software factory.
+
+## Sources and evidence
+
+This manifesto combines an observed implementation proposal and Dispatch review with illustrative discovery, operations, and product-strategy workflows. The actual issue requires an at-or-above threshold and reuse of existing carrier configuration. Tax, destination, and currency handling must follow that configuration. The customer scenarios and proposed experiments are not measured business results. The review snapshot is from September 9, 2026. Its findings remained open, and the Magento tests were not executed for this article. The diagrams paraphrase the review; proposed investigations and corrections are labeled separately.
+
+- [Anthropic, Introducing Claude Opus 4.5](https://www.anthropic.com/news/claude-opus-4-5), November 24, 2025. Used for the release date, not a claim that all coding is solved.
+- [Anthropic, The AI-Native SDLC playbook](https://claude.com/blog/the-ai-native-sdlc-playbook), August 21, 2026. Related design guidance for artifacts, controls, and lifecycle feedback.
+- [GOV.UK, Using performance data to improve your service](https://www.gov.uk/service-manual/measuring-success/using-data-to-improve-your-service-an-introduction), updated April 6, 2022. Guidance for interpreting service performance alongside user research.
+- [Microsoft Research, Patterns of trustworthy experimentation](https://www.microsoft.com/en-us/research/articles/patterns-of-trustworthy-experimentation-pre-experiment-stage/), July 31, 2020. Guidance on hypotheses, measurement, and experiment design.
+- [Google, Example error-budget policy](https://sre.google/workbook/error-budget-policy/). An example of agreed rules connecting reliability evidence with priorities.
+- [Anthropic, Demystifying evals for AI agents](https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents), January 9, 2026. Guidance for evaluating the complete agent system and its outcomes.
+- [Meta, Automating Low-Risk Code Review at Meta](https://arxiv.org/abs/2605.30208), revised June 12, 2026. A production example of conditional review and automated landing, with observational results and limits on generalization.

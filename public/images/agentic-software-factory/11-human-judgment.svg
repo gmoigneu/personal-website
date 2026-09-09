@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1010" viewBox="0 0 1200 1010" role="img" aria-labelledby="title desc">
+<title id="title">Who owns which judgment</title><desc id="desc">Agents prepare the work and evidence. Named people remain accountable for decisions.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<rect width="1200" height="1010" rx="12" fill="#0b0f10"/>
+<text x="44" y="42" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">G/</text>
+<text x="101" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="start">AI SOFTWARE FACTORY</text>
+<text x="1156" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="end">11 / 12</text>
+<text x="44" y="104" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="650" text-anchor="start">Who owns which judgment</text>
+<text x="44" y="145" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Agents prepare the work and evidence. Named people remain accountable for decisions.</text>
+<line x1="44" y1="170" x2="1156" y2="170" stroke="#3b4648" stroke-width="1"/>
+<text x="64" y="218" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">RESPONSIBILITY</text>
+<text x="388" y="218" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">AGENT PREPARES</text>
+<text x="800" y="218" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">HUMAN OWNS THE JUDGMENT</text>
+<rect x="44" y="243" width="1112" height="80" rx="6" fill="#171d1e" stroke="#3b4648" stroke-width="1"/>
+<line x1="365" y1="255" x2="365" y2="311" stroke="#3b4648" stroke-width="1"/>
+<line x1="778" y1="255" x2="778" y2="311" stroke="#3b4648" stroke-width="1"/>
+<text x="64" y="290" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" text-anchor="start">Business stakeholders</text>
+<text x="388" y="290" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Options, costs, and constraints</text>
+<text x="800" y="290" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Investment and business risk</text>
+<rect x="44" y="335" width="1112" height="80" rx="6" fill="#0b0f10" stroke="#3b4648" stroke-width="1"/>
+<line x1="365" y1="347" x2="365" y2="403" stroke="#3b4648" stroke-width="1"/>
+<line x1="778" y1="347" x2="778" y2="403" stroke="#3b4648" stroke-width="1"/>
+<text x="64" y="382" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" text-anchor="start">Product, design, research</text>
+<text x="388" y="369" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Customer evidence, proposed intent,</text>
+<text x="388" y="397" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">experience options, acceptance evidence</text>
+<text x="800" y="369" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Problem, priority, user experience,</text>
+<text x="800" y="397" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">and acceptance against intent</text>
+<rect x="44" y="427" width="1112" height="80" rx="6" fill="#171d1e" stroke="#3b4648" stroke-width="1"/>
+<line x1="365" y1="439" x2="365" y2="495" stroke="#3b4648" stroke-width="1"/>
+<line x1="778" y1="439" x2="778" y2="495" stroke="#3b4648" stroke-width="1"/>
+<text x="64" y="474" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" text-anchor="start">Senior engineers</text>
+<text x="388" y="461" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Design options, code findings,</text>
+<text x="388" y="489" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">technical consequences</text>
+<text x="800" y="474" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Technical choices and readiness</text>
+<rect x="44" y="519" width="1112" height="80" rx="6" fill="#0b0f10" stroke="#3b4648" stroke-width="1"/>
+<line x1="365" y1="531" x2="365" y2="587" stroke="#3b4648" stroke-width="1"/>
+<line x1="778" y1="531" x2="778" y2="587" stroke="#3b4648" stroke-width="1"/>
+<text x="64" y="566" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" text-anchor="start">QA</text>
+<text x="388" y="553" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Test proposals, coverage gaps,</text>
+<text x="388" y="581" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">results and unresolved failures</text>
+<text x="800" y="553" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Validation strategy and</text>
+<text x="800" y="581" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">assessment of quality risk</text>
+<rect x="44" y="611" width="1112" height="80" rx="6" fill="#171d1e" stroke="#3b4648" stroke-width="1"/>
+<line x1="365" y1="623" x2="365" y2="679" stroke="#3b4648" stroke-width="1"/>
+<line x1="778" y1="623" x2="778" y2="679" stroke="#3b4648" stroke-width="1"/>
+<text x="64" y="658" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" text-anchor="start">Security</text>
+<text x="388" y="658" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Threats, findings, and evidence</text>
+<text x="800" y="658" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Security risk and required controls</text>
+<rect x="44" y="703" width="1112" height="80" rx="6" fill="#0b0f10" stroke="#3b4648" stroke-width="1"/>
+<line x1="365" y1="715" x2="365" y2="771" stroke="#3b4648" stroke-width="1"/>
+<line x1="778" y1="715" x2="778" y2="771" stroke="#3b4648" stroke-width="1"/>
+<text x="64" y="737" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" text-anchor="start">Service owners, platform,</text>
+<text x="64" y="765" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" text-anchor="start">and operations</text>
+<text x="388" y="737" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Release evidence, service diagnosis,</text>
+<text x="388" y="765" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">recovery proposals</text>
+<text x="800" y="737" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Release, reliability, recovery,</text>
+<text x="800" y="765" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">and incident decisions</text>
+<rect x="44" y="795" width="1112" height="80" rx="6" fill="#171d1e" stroke="#3b4648" stroke-width="1"/>
+<line x1="365" y1="807" x2="365" y2="863" stroke="#3b4648" stroke-width="1"/>
+<line x1="778" y1="807" x2="778" y2="863" stroke="#3b4648" stroke-width="1"/>
+<text x="64" y="842" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="600" text-anchor="start">Analysts</text>
+<text x="388" y="829" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Queries, observed signals,</text>
+<text x="388" y="857" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">measurement proposals</text>
+<text x="800" y="829" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Measurement validity and</text>
+<text x="800" y="857" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">interpretation of results</text>
+<text x="44" y="934" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" text-anchor="start">One person may hold several roles. Assign an owner for each decision and agree who can escalate.</text>
+<line x1="44" y1="952" x2="1156" y2="952" stroke="#3b4648" stroke-width="1"/>
+<text x="44" y="979" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Accountability does not require manual approval of every action. Approval depends on risk.</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img" aria-labelledby="title desc">
+<title id="title">Expand authority through evidence</title><desc id="desc">Choose one useful workflow. Increase what it can do only when its performance supports it.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<rect width="1200" height="1000" rx="12" fill="#0b0f10"/>
+<text x="44" y="42" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">G/</text>
+<text x="101" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="start">AI SOFTWARE FACTORY</text>
+<text x="1156" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="end">12 / 12</text>
+<text x="44" y="104" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="650" text-anchor="start">Expand authority through evidence</text>
+<text x="44" y="145" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Choose one useful workflow. Increase what it can do only when its performance supports it.</text>
+<line x1="44" y1="170" x2="1156" y2="170" stroke="#3b4648" stroke-width="1"/>
+<rect x="44" y="286" width="340" height="256" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="64" y="320" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">PREPARE EVIDENCE</text>
+<text x="64" y="360" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Make the work useful</text>
+<text x="64" y="402" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Read permitted context.</text>
+<text x="64" y="434" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Summarize and propose.</text>
+<text x="64" y="466" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Human decides what to do.</text>
+<text x="64" y="517" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="500" text-anchor="start">Observe errors and omissions</text>
+<rect x="430" y="286" width="340" height="256" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="450" y="320" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">TAKE BOUNDED ACTION</text>
+<text x="450" y="360" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Act within a policy</text>
+<text x="450" y="402" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Permit specific actions.</text>
+<text x="450" y="434" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Set limits and stop conditions.</text>
+<text x="450" y="466" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Escalate anything outside them.</text>
+<text x="450" y="517" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="500" text-anchor="start">Check outcomes and failures</text>
+<rect x="816" y="286" width="340" height="256" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="836" y="320" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">CONNECT WORKFLOWS</text>
+<text x="836" y="360" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Keep the same controls</text>
+<text x="836" y="402" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Pass current evidence onward.</text>
+<text x="836" y="434" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Preserve owners and limits.</text>
+<text x="836" y="466" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Test each new connection.</text>
+<text x="836" y="517" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="500" text-anchor="start">Review combined consequences</text>
+<text x="600" y="221" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="middle">Each expansion requires evidence of performance and a named owner&#x27;s policy.</text>
+<line x1="384" y1="414" x2="430" y2="414" stroke="#d6fa00" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="770" y1="414" x2="816" y2="414" stroke="#d6fa00" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M 986 542 L 986 594 L 214 594 L 214 542" fill="none" stroke="#d6fa00" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<line x1="600" y1="542" x2="600" y2="594" stroke="#d6fa00" stroke-width="2"/>
+<text x="600" y="634" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="middle">Reduce or disable autonomy when evidence, conditions, or policy change.</text>
+<rect x="44" y="688" width="1112" height="167" rx="9" fill="#171d1e" stroke="#3b4648" stroke-width="1.5"/>
+<text x="64" y="723" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">FOUNDATIONS AT EVERY STAGE</text>
+<circle cx="69" cy="761" r="4" fill="#ae9cff"/>
+<text x="87" y="768" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Current context</text>
+<circle cx="440" cy="761" r="4" fill="#ae9cff"/>
+<text x="458" y="768" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Permissions</text>
+<circle cx="811" cy="761" r="4" fill="#ae9cff"/>
+<text x="829" y="768" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Execution records</text>
+<circle cx="69" cy="810" r="4" fill="#ae9cff"/>
+<text x="87" y="817" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Evaluation</text>
+<circle cx="440" cy="810" r="4" fill="#ae9cff"/>
+<text x="458" y="817" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Cost limits</text>
+<circle cx="811" cy="810" r="4" fill="#ae9cff"/>
+<text x="829" y="817" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="400" text-anchor="start">Failure handling</text>
+<text x="44" y="903" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="500" text-anchor="start">Keep the authority narrow enough to explain, observe, and withdraw.</text>
+<line x1="44" y1="942" x2="1156" y2="942" stroke="#3b4648" stroke-width="1"/>
+<text x="44" y="969" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">This is a decision pattern, not a maturity score or a fixed timetable.</text>
+</svg>

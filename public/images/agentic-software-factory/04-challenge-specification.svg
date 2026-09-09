@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1120" viewBox="0 0 1200 1120" role="img" aria-labelledby="title desc">
+<title id="title">One progress bar, six areas to examine</title><desc id="desc">Review map informed by the actual change. The bar must agree with carrier eligibility.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<rect width="1200" height="1120" rx="12" fill="#0b0f10"/>
+<text x="44" y="42" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">G/</text>
+<text x="101" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="start">AI SOFTWARE FACTORY</text>
+<text x="1156" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="end">04 / 12</text>
+<text x="44" y="104" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="650" text-anchor="start">One progress bar, six areas to examine</text>
+<text x="44" y="145" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Review map informed by the actual change. The bar must agree with carrier eligibility.</text>
+<line x1="44" y1="170" x2="1156" y2="170" stroke="#3b4648" stroke-width="1"/>
+<rect x="44" y="217" width="1112" height="85" rx="9" fill="#171d1e" stroke="#71e1f2" stroke-width="1.5"/>
+<text x="67" y="251" fill="#71e1f2" font-family="Menlo, Consolas, monospace" font-size="17" font-weight="600" text-anchor="start">ACCEPTED INTENT</text>
+<text x="67" y="284" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="start">Display the existing shipping offer, using the carrier&#x27;s rules.</text>
+<rect x="44" y="350" width="352" height="192" rx="9" fill="#171d1e" stroke="#71e1f2" stroke-width="1.5"/>
+<text x="64" y="379" fill="#71e1f2" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">DESIGN + QA</text>
+<text x="64" y="416" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Storefront UI</text>
+<text x="64" y="451" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Accessible amount and states</text>
+<text x="64" y="480" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Update after cart changes</text>
+<text x="64" y="509" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">No unconfirmed promise</text>
+<line x1="220" y1="302" x2="220" y2="350" stroke="#71e1f2" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="424" y="350" width="352" height="192" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="444" y="379" fill="#ae9cff" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">ENGINEERING + QA</text>
+<text x="444" y="416" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Cart and checkout</text>
+<text x="444" y="451" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Match the carrier&#x27;s decision</text>
+<text x="444" y="480" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Contain widget failures</text>
+<text x="444" y="509" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Exactly $50 meets threshold</text>
+<line x1="600" y1="302" x2="600" y2="350" stroke="#ae9cff" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="804" y="350" width="352" height="192" rx="9" fill="#171d1e" stroke="#efb47f" stroke-width="1.5"/>
+<text x="824" y="379" fill="#efb47f" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">PRODUCT + SECURITY</text>
+<text x="824" y="416" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Admin controls</text>
+<text x="824" y="451" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Reuse existing settings</text>
+<text x="824" y="480" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">No new threshold field</text>
+<text x="824" y="509" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Check edits in open carts</text>
+<line x1="980" y1="302" x2="980" y2="350" stroke="#efb47f" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="44" y="580" width="352" height="192" rx="9" fill="#171d1e" stroke="#71e1f2" stroke-width="1.5"/>
+<text x="64" y="609" fill="#71e1f2" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">PRODUCT + ENGINEERING</text>
+<text x="64" y="646" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Promotion rules</text>
+<text x="64" y="681" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Carrier tax and discount basis</text>
+<text x="64" y="710" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Respect destination limits</text>
+<text x="64" y="739" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Check rule-granted shipping</text>
+<rect x="424" y="580" width="352" height="192" rx="9" fill="#171d1e" stroke="#83a2ff" stroke-width="1.5"/>
+<text x="444" y="609" fill="#83a2ff" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">ENGINEERING + OPS</text>
+<text x="444" y="646" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Cache behavior</text>
+<text x="444" y="681" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Cart, destination, rule version</text>
+<text x="444" y="710" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Invalidate changed inputs</text>
+<text x="444" y="739" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Isolate each shopper&#x27;s result</text>
+<rect x="804" y="580" width="352" height="192" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="824" y="609" fill="#ae9cff" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">PLATFORM + QA</text>
+<text x="824" y="646" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Shipping rates</text>
+<text x="824" y="681" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Tax-inclusive comparisons</text>
+<text x="824" y="710" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Base and display currencies</text>
+<text x="824" y="739" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Existing cart data response</text>
+<path d="M 44 446 H 20 V 810 H 600 V 850" fill="none" stroke="#d6fa00" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<line x1="44" y1="676" x2="20" y2="676" stroke="#d6fa00" stroke-width="2"/>
+<path d="M 1156 446 H 1180 V 810 H 600" fill="none" stroke="#d6fa00" stroke-width="2" stroke-linejoin="round"/>
+<line x1="1156" y1="676" x2="1180" y2="676" stroke="#d6fa00" stroke-width="2"/>
+<line x1="600" y1="542" x2="600" y2="560" stroke="#ae9cff" stroke-width="2"/>
+<path d="M 600 560 H 792 V 810" fill="none" stroke="#d6fa00" stroke-width="2" stroke-linejoin="round"/>
+<line x1="600" y1="772" x2="600" y2="810" stroke="#d6fa00" stroke-width="2"/>
+<rect x="240" y="850" width="720" height="119" rx="9" fill="#0b0f10" stroke="#d6fa00" stroke-width="2"/>
+<text x="263" y="886" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="start">Owners settle the policy and acceptance tests</text>
+<text x="263" y="922" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Existing carrier · inclusive threshold · tax and country rules</text>
+<text x="263" y="951" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Verify cart behavior and currency under the store settings</text>
+<line x1="600" y1="969" x2="600" y2="1004" stroke="#ae9cff" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="270" y="1004" width="660" height="49" rx="9" fill="#0b0f10" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="600" y="1038" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="middle">Accepted specification → coding agent</text>
+<line x1="44" y1="1062" x2="1156" y2="1062" stroke="#3b4648" stroke-width="1"/>
+<text x="44" y="1089" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Agents prepare proposals and challenges. The relevant people accept the decisions.</text>
+</svg>

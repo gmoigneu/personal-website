@@ -5,9 +5,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'blog'>['data'] & { readingMinutes?: number };
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, readingMinutes = 5 } = Astro.props;
 
 function formatDate(date: Date) {
 	return date.toLocaleDateString('en-US', {
@@ -17,8 +17,7 @@ function formatDate(date: Date) {
 	});
 }
 
-// Estimate read time (roughly 200 words per minute)
-const readTime = '5 min read';
+const readTime = `${readingMinutes} min read`;
 ---
 
 <!doctype html>
@@ -63,7 +62,7 @@ const readTime = '5 min read';
 					<h1 class="font-display text-[36px] font-semibold tracking-[-1.5px] leading-[1.1] text-[var(--color-text-primary)]">
 						{title}
 					</h1>
-					<div class="flex items-center gap-6">
+					<div class="flex flex-wrap items-center gap-x-6 gap-y-2">
 						<time class="font-mono text-[13px] text-[var(--color-text-muted)]">{formatDate(pubDate)}</time>
 						<span class="text-[var(--color-text-muted)]">&bull;</span>
 						<span class="font-body text-[13px] text-[var(--color-text-muted)]">{readTime}</span>

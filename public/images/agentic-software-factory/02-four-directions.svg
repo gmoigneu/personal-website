@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1010" viewBox="0 0 1200 1010" role="img" aria-labelledby="title desc">
+<title id="title">Expand in four directions</title><desc id="desc">Use the coding agent as the starting point for wider AI investment.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<rect width="1200" height="1010" rx="12" fill="#0b0f10"/>
+<text x="44" y="42" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">G/</text>
+<text x="101" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="start">AI SOFTWARE FACTORY</text>
+<text x="1156" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="end">02 / 12</text>
+<text x="44" y="104" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="650" text-anchor="start">Expand in four directions</text>
+<text x="44" y="145" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Use the coding agent as the starting point for wider AI investment.</text>
+<line x1="44" y1="170" x2="1156" y2="170" stroke="#3b4648" stroke-width="1"/>
+<rect x="420" y="208" width="360" height="152" rx="9" fill="#171d1e" stroke="#efb47f" stroke-width="1.5"/>
+<text x="440" y="237" fill="#efb47f" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">UP / STRATEGY</text>
+<text x="440" y="274" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Choose what comes next</text>
+<text x="440" y="309" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Evidence, hypotheses, priorities</text>
+<rect x="44" y="442" width="338" height="210" rx="9" fill="#171d1e" stroke="#71e1f2" stroke-width="1.5"/>
+<text x="64" y="471" fill="#71e1f2" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">LEFT / PRODUCT</text>
+<text x="64" y="508" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Intent + specification</text>
+<text x="64" y="543" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Understand the problem</text>
+<text x="64" y="572" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Set behavior and constraints</text>
+<text x="64" y="601" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Product + design judgment</text>
+<rect x="420" y="442" width="360" height="210" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="440" y="471" fill="#ae9cff" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">THE STARTING CAPABILITY</text>
+<text x="440" y="508" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">The coding agent</text>
+<text x="440" y="543" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Implementation + routine checks</text>
+<rect x="818" y="442" width="338" height="210" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="838" y="471" fill="#ae9cff" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">RIGHT / VALIDATION</text>
+<text x="838" y="508" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Review + testing</text>
+<text x="838" y="543" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Find potential problems</text>
+<text x="838" y="572" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Assemble evidence</text>
+<text x="838" y="601" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Engineer + QA judgment</text>
+<rect x="420" y="752" width="360" height="159" rx="9" fill="#171d1e" stroke="#83a2ff" stroke-width="1.5"/>
+<text x="440" y="781" fill="#83a2ff" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">DOWN / OPERATIONS</text>
+<text x="440" y="818" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Deliver and run</text>
+<text x="440" y="853" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Release, maintain, recover</text>
+<text x="440" y="882" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Platform + service ownership</text>
+<line x1="420" y1="547" x2="382" y2="547" stroke="#b0babc" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6 6"/>
+<line x1="780" y1="547" x2="818" y2="547" stroke="#b0babc" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6 6"/>
+<line x1="600" y1="442" x2="600" y2="360" stroke="#b0babc" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6 6"/>
+<line x1="600" y1="652" x2="600" y2="752" stroke="#b0babc" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="6 6"/>
+<path d="M 420 284 H 213 V 442" fill="none" stroke="#efb47f" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="236" y="396" fill="#efb47f" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="500" text-anchor="start">Priorities become intent</text>
+<path d="M 780 831.5 H 1180 V 284 H 780" fill="none" stroke="#efb47f" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="839" y="749" fill="#efb47f" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Product and operating</text>
+<text x="839" y="777" fill="#efb47f" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">evidence informs strategy</text>
+<line x1="44" y1="952" x2="1156" y2="952" stroke="#3b4648" stroke-width="1"/>
+<text x="44" y="979" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Dashed arrows show areas of expansion. The solid return paths show feedback.</text>
+</svg>

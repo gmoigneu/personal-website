@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1030" viewBox="0 0 1200 1030" role="img" aria-labelledby="title desc">
+<title id="title">Turn evidence into a product hypothesis</title><desc id="desc">Proposed feedback for the progress bar. A higher basket value alone does not establish benefit.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<rect width="1200" height="1030" rx="12" fill="#0b0f10"/>
+<text x="44" y="42" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">G/</text>
+<text x="101" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="start">AI SOFTWARE FACTORY</text>
+<text x="1156" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="end">10 / 12</text>
+<text x="44" y="104" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="650" text-anchor="start">Turn evidence into a product hypothesis</text>
+<text x="44" y="145" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Proposed feedback for the progress bar. A higher basket value alone does not establish benefit.</text>
+<line x1="44" y1="170" x2="1156" y2="170" stroke="#3b4648" stroke-width="1"/>
+<rect x="44" y="205" width="1112" height="70" rx="9" fill="#171d1e" stroke="#efb47f" stroke-width="1.5"/>
+<text x="600" y="249" fill="#efb47f" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="500" text-anchor="middle">Checkout events · Customer research · Support · Shipping and margin evidence</text>
+<path d="M 600 275 L 600 295 L 174 295 L 174 320" fill="none" stroke="#efb47f" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="44" y="320" width="260" height="186" rx="9" fill="#171d1e" stroke="#efb47f" stroke-width="1.5"/>
+<text x="60" y="350" fill="#efb47f" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">OBSERVATION</text>
+<text x="60" y="388" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="start">Inspect cart exits</text>
+<text x="60" y="427" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Read checkout events.</text>
+<text x="60" y="456" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Check support reports.</text>
+<rect x="328" y="320" width="260" height="186" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="344" y="350" fill="#ae9cff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">AGENT PREPARES</text>
+<text x="344" y="388" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="start">Possible causes</text>
+<text x="344" y="427" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Cost or unclear terms?</text>
+<text x="344" y="456" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Test each explanation.</text>
+<rect x="612" y="320" width="260" height="186" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="628" y="350" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">HUMAN JUDGMENT</text>
+<text x="628" y="388" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="start">Worth testing?</text>
+<text x="628" y="427" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Product and stakeholders</text>
+<text x="628" y="456" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">choose the priority.</text>
+<rect x="896" y="320" width="260" height="186" rx="9" fill="#171d1e" stroke="#efb47f" stroke-width="1.5"/>
+<text x="912" y="350" fill="#efb47f" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">TESTABLE HYPOTHESIS</text>
+<text x="912" y="388" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="start">Explain the gap</text>
+<text x="912" y="427" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Reduce checkout exits</text>
+<text x="912" y="456" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">without eroding margin.</text>
+<line x1="304" y1="413" x2="328" y2="413" stroke="#efb47f" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="588" y1="413" x2="612" y2="413" stroke="#efb47f" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="872" y1="413" x2="896" y2="413" stroke="#efb47f" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="1026" y1="506" x2="1026" y2="560" stroke="#efb47f" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="896" y="560" width="260" height="186" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="912" y="590" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">HUMAN DECISION</text>
+<text x="912" y="628" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="start">Use carrier settings</text>
+<text x="912" y="667" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Example threshold $50.</text>
+<text x="912" y="696" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Exactly $50 meets it.</text>
+<text x="912" y="725" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">No new admin fields.</text>
+<rect x="612" y="560" width="260" height="186" rx="9" fill="#171d1e" stroke="#efb47f" stroke-width="1.5"/>
+<text x="628" y="590" fill="#efb47f" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">FACTORY WORKFLOW</text>
+<text x="628" y="628" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="start">Build and validate</text>
+<text x="628" y="667" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">$45 + $5 reaches $50.</text>
+<text x="628" y="696" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Reuse existing cart data.</text>
+<text x="628" y="725" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">No extra bar request.</text>
+<rect x="328" y="560" width="260" height="186" rx="9" fill="#171d1e" stroke="#efb47f" stroke-width="1.5"/>
+<text x="344" y="590" fill="#efb47f" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">MEASUREMENT</text>
+<text x="344" y="628" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="start">Assess the result</text>
+<text x="344" y="667" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Conversion and support</text>
+<text x="344" y="696" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Shipping subsidy, margin</text>
+<text x="344" y="725" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Cart abandonment</text>
+<rect x="44" y="560" width="260" height="186" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="60" y="590" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" text-anchor="start">HUMAN JUDGMENT</text>
+<text x="60" y="628" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="start">Decide what follows</text>
+<text x="60" y="667" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Product owner weighs</text>
+<text x="60" y="696" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">evidence and uncertainty.</text>
+<line x1="328" y1="653" x2="304" y2="653" stroke="#efb47f" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="612" y1="653" x2="588" y2="653" stroke="#efb47f" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="896" y1="653" x2="872" y2="653" stroke="#efb47f" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="174" y1="746" x2="174" y2="775" stroke="#d6fa00" stroke-width="2"/>
+<line x1="174" y1="775" x2="1026" y2="775" stroke="#d6fa00" stroke-width="2"/>
+<line x1="174" y1="775" x2="174" y2="810" stroke="#d6fa00" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="44" y="810" width="260" height="96" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="62" y="847" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="start">Continue</text>
+<text x="62" y="879" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Keep the change</text>
+<line x1="458" y1="775" x2="458" y2="810" stroke="#d6fa00" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="328" y="810" width="260" height="96" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="346" y="847" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="start">Change</text>
+<text x="346" y="879" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Revise the hypothesis</text>
+<line x1="742" y1="775" x2="742" y2="810" stroke="#d6fa00" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="612" y="810" width="260" height="96" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="630" y="847" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="start">Stop</text>
+<text x="630" y="879" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">End the investment</text>
+<line x1="1026" y1="775" x2="1026" y2="810" stroke="#d6fa00" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="896" y="810" width="260" height="96" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="914" y="847" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="start">Inconclusive</text>
+<text x="914" y="879" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Gather more evidence</text>
+<line x1="174" y1="906" x2="174" y2="923" stroke="#efb47f" stroke-width="2" stroke-dasharray="6 6"/>
+<line x1="458" y1="906" x2="458" y2="923" stroke="#efb47f" stroke-width="2" stroke-dasharray="6 6"/>
+<line x1="742" y1="906" x2="742" y2="923" stroke="#efb47f" stroke-width="2" stroke-dasharray="6 6"/>
+<line x1="1026" y1="906" x2="1026" y2="923" stroke="#efb47f" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M 174 923 L 1180 923 L 1180 190 L 20 190 L 20 413 L 44 413" fill="none" stroke="#efb47f" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="7 6"/>
+<text x="600" y="949" fill="#efb47f" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="500" text-anchor="middle">Record every outcome as evidence for the next product decision.</text>
+<line x1="44" y1="972" x2="1156" y2="972" stroke="#3b4648" stroke-width="1"/>
+<text x="44" y="999" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Match carrier and store tax, country and currency rules. No deployment or business results shown.</text>
+</svg>

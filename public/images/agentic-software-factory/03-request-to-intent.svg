@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1100" viewBox="0 0 1200 1100" role="img" aria-labelledby="title desc">
+<title id="title">From a shipping request to accepted intent</title><desc id="desc">Illustrative discovery. The threshold example follows the real feature request.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<rect width="1200" height="1100" rx="12" fill="#0b0f10"/>
+<text x="44" y="42" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">G/</text>
+<text x="101" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="start">AI SOFTWARE FACTORY</text>
+<text x="1156" y="40" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="500" text-anchor="end">03 / 12</text>
+<text x="44" y="104" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="650" text-anchor="start">From a shipping request to accepted intent</text>
+<text x="44" y="145" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Illustrative discovery. The threshold example follows the real feature request.</text>
+<line x1="44" y1="170" x2="1156" y2="170" stroke="#3b4648" stroke-width="1"/>
+<rect x="44" y="220" width="352" height="175" rx="9" fill="#171d1e" stroke="#71e1f2" stroke-width="1.5"/>
+<text x="64" y="249" fill="#71e1f2" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">SOURCE EVIDENCE</text>
+<text x="64" y="286" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Observation</text>
+<text x="64" y="321" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Shoppers ask when</text>
+<text x="64" y="350" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">delivery becomes free.</text>
+<text x="64" y="379" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Keep the support evidence.</text>
+<rect x="424" y="220" width="352" height="175" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="444" y="249" fill="#ae9cff" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">NEEDS INVESTIGATION</text>
+<text x="444" y="286" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Possible explanation</text>
+<text x="444" y="321" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Shipping uncertainty may</text>
+<text x="444" y="350" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">contribute to abandonment.</text>
+<text x="444" y="379" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Check other explanations.</text>
+<rect x="804" y="220" width="352" height="175" rx="9" fill="#171d1e" stroke="#ae9cff" stroke-width="1.5"/>
+<text x="824" y="249" fill="#ae9cff" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">PROPOSAL</text>
+<text x="824" y="286" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Progress bar</text>
+<text x="824" y="321" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Show remaining eligible spend.</text>
+<text x="824" y="350" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Reuse the carrier&#x27;s threshold.</text>
+<text x="824" y="379" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Set conditions before coding.</text>
+<line x1="396" y1="307.5" x2="424" y2="307.5" stroke="#b0babc" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="776" y1="307.5" x2="804" y2="307.5" stroke="#b0babc" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 980 395 V 442 H 600 V 490" fill="none" stroke="#ae9cff" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="424" y="490" width="352" height="132" rx="9" fill="#0b0f10" stroke="#d6fa00" stroke-width="2"/>
+<text x="444" y="519" fill="#d6fa00" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">HUMAN DECISION</text>
+<text x="600" y="556" fill="#d6fa00" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="600" text-anchor="middle">Product owner decides</text>
+<text x="600" y="591" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="middle">Is this the problem to pursue?</text>
+<line x1="424" y1="556" x2="396" y2="556" stroke="#d6fa00" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="44" y="490" width="352" height="132" rx="9" fill="#171d1e" stroke="#71e1f2" stroke-width="1.5"/>
+<text x="64" y="519" fill="#71e1f2" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">MISSING EVIDENCE</text>
+<text x="64" y="556" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Investigate</text>
+<text x="64" y="591" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Return to the source.</text>
+<path d="M 220 490 V 395" fill="none" stroke="#71e1f2" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<line x1="776" y1="556" x2="804" y2="556" stroke="#d6fa00" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="804" y="490" width="352" height="132" rx="9" fill="#171d1e" stroke="#b0babc" stroke-width="1.5"/>
+<text x="824" y="519" fill="#b0babc" font-family="Menlo, Consolas, monospace" font-size="16" font-weight="600" text-anchor="start">NO COMMITMENT</text>
+<text x="824" y="556" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start">Defer or reject</text>
+<text x="824" y="591" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Record the reason.</text>
+<line x1="600" y1="622" x2="600" y2="684" stroke="#d6fa00" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="252" y="684" width="696" height="126" rx="9" fill="#171d1e" stroke="#d6fa00" stroke-width="1.5"/>
+<text x="276" y="722" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600" text-anchor="start">Accepted intent</text>
+<text x="276" y="762" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Explain the shipping offer with an accurate cart promise.</text>
+<text x="276" y="791" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Agree eligible spend, destinations, method, and owner.</text>
+<rect x="252" y="844" width="696" height="153" rx="9" fill="#171d1e" stroke="#71e1f2" stroke-width="1.5"/>
+<text x="276" y="875" fill="#71e1f2" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" text-anchor="start">FEATURE REQUEST · $30 SUBTOTAL · $50 THRESHOLD</text>
+<text x="276" y="912" fill="#f4f5f2" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="start">Add $20.00 for free shipping</text>
+<rect x="276" y="931" width="648" height="10" rx="5" fill="#3b4648" stroke="#3b4648" stroke-width="0"/>
+<rect x="276" y="931" width="388.8" height="10" rx="5" fill="#71e1f2" stroke="#71e1f2" stroke-width="0"/>
+<text x="276" y="978" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Exactly $50 meets the threshold. Carrier conditions apply.</text>
+<line x1="44" y1="1042" x2="1156" y2="1042" stroke="#3b4648" stroke-width="1"/>
+<text x="44" y="1069" fill="#b0babc" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Agent synthesis prepares the decision. The product owner accepts the intent.</text>
+</svg>

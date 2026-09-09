@@ -13,8 +13,11 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 const { Content } = await render(post);
+// Image descriptions are accessibility text, not part of the reading estimate.
+const text = (post.body ?? '').replace(/!\[[^\]]*\]\([^)]*\)/g, '').trim();
+const readingMinutes = Math.max(1, Math.ceil(text.split(/\s+/).length / 200));
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post.data} readingMinutes={readingMinutes}>
 	<Content />
 </BlogPost>
