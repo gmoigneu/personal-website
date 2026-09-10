@@ -10,6 +10,13 @@ const blog = defineCollection({
 			title: z.string(),
 			description: z.string(),
 			summary: z.string().optional(),
+			socialTitle: z.string().trim().min(1).max(180).optional(),
+			socialImage: z.object({
+				src: z.string().regex(/\.(png|jpe?g)$/i, 'Social images must use PNG or JPEG.')
+					.refine((value) => value.startsWith('./') || value.startsWith('../'), 'Use a relative path to a local social image.')
+					.pipe(image()),
+				alt: z.string().trim().min(1),
+			}).optional(),
 			// Transform string to Date object
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),

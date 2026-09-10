@@ -6,6 +6,7 @@ import ArticleContents from '../components/ArticleContents.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
+import { articleSocialImage } from '../lib/social-images';
 
 type Props = CollectionEntry<'blog'>['data'] & {
 	readingMinutes?: number;
@@ -15,6 +16,7 @@ type Props = CollectionEntry<'blog'>['data'] & {
 const { title, description, summary, pubDate, updatedDate, heroImage, readingMinutes = 5, headings = [] } = Astro.props;
 const sections = headings.filter((heading) => heading.depth === 2);
 const showContents = sections.length >= 3;
+const socialImage = articleSocialImage(Astro.props);
 
 function formatDate(date: Date) {
 	return date.toLocaleDateString('en-US', {
@@ -30,13 +32,13 @@ const readTime = `${readingMinutes} min read`;
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} image={heroImage} type="article" publishedTime={pubDate} modifiedTime={updatedDate} />
+		<BaseHead title={title} description={description} socialImage={socialImage} type="article" publishedTime={pubDate} modifiedTime={updatedDate} />
 		<script is:inline type="application/ld+json" set:html={JSON.stringify({
 			"@context": "https://schema.org",
 			"@type": "Article",
 			"headline": title,
 			"description": description,
-			"image": heroImage ? new URL(heroImage.src, Astro.site).toString() : undefined,
+			"image": new URL(socialImage.src, Astro.site).toString(),
 			"datePublished": pubDate.toISOString(),
 			"dateModified": updatedDate ? updatedDate.toISOString() : pubDate.toISOString(),
 			"author": {
