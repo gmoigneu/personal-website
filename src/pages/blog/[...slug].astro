@@ -12,12 +12,16 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
-const { Content } = await render(post);
-// Image descriptions are accessibility text, not part of the reading estimate.
-const text = (post.body ?? '').replace(/!\[[^\]]*\]\([^)]*\)/g, '').trim();
+const { Content, headings } = await render(post);
+// Exclude image descriptions and MDX component attributes from the estimate.
+const text = (post.body ?? '')
+	.replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+	.replace(/<FactoryDiagram\b[\s\S]*?\/>/g, '')
+	.replace(/^import .*;?$/gm, '')
+	.trim();
 const readingMinutes = Math.max(1, Math.ceil(text.split(/\s+/).length / 200));
 ---
 
-<BlogPost {...post.data} readingMinutes={readingMinutes}>
+<BlogPost {...post.data} readingMinutes={readingMinutes} headings={headings}>
 	<Content />
 </BlogPost>
