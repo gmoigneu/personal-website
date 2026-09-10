@@ -11,6 +11,7 @@ pnpm dev          # Start dev server at localhost:4321
 pnpm build        # Build production site to ./dist/
 pnpm preview      # Preview production build locally
 pnpm astro check  # Run TypeScript type checking
+pnpm test         # Build isolated fixtures and verify social previews
 ```
 
 ## Architecture
@@ -23,6 +24,8 @@ Blog posts live in `src/content/blog/` as Markdown or MDX files. The schema is d
 - `title` (required): Post title
 - `description` (required): Post description for SEO
 - `summary` (optional): Short reader overview shown under article metadata
+- `socialTitle` (optional): Shorter title for the generated social card, up to 180 characters
+- `socialImage` (optional): Dedicated local PNG/JPEG override with `src` and required `alt`
 - `pubDate` (required): Publication date
 - `updatedDate` (optional): Last update date
 - `heroImage` (optional): Hero image with automatic optimization
@@ -51,6 +54,14 @@ Articles use a 660 px reading column, 20 px desktop and 18 px mobile body text, 
 The blog route passes rendered headings to the layout. Articles with at least three level-two headings get section navigation. Keep heading anchors stable when editing published articles. Optional summaries should state the argument before the reader starts the full text.
 
 The software factory article uses `FactoryDiagram.astro` for wide desktop images and readable mobile cards. Keep mobile diagram content consistent with the original SVG, including evidence limits and numerical examples.
+
+### Social previews
+
+`src/pages/social/[card].png.ts` generates the homepage and article cards at build time. Other pages share the homepage card. Hero images only control the article body. All social metadata uses the production URL and includes image dimensions, format, and alt text.
+
+Use `socialTitle` when an article needs a shorter card headline. For a custom image, set `socialImage: { src: '../../assets/my-card.png', alt: 'Description of the card' }` in frontmatter. Prefer 1200 × 630 images. No override is needed for normal articles.
+
+The renderer reads the bundled fonts and portrait from the project directory. Run builds from the repository root. Increment `CARD_VERSION` in `src/lib/social-images.ts` when changing the card design, fonts, or portrait, so social crawlers receive a new image URL. Title changes update URLs automatically. See `docs/adr/0001-static-social-cards.md`.
 
 ### Color Palette
 
