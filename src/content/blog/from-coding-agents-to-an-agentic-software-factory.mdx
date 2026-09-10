@@ -90,7 +90,7 @@ A workflow might need one agent, several specialist passes, or mostly convention
 
 Use a free-shipping progress bar as the running example. In my Magento demo, the request was to place it above the minicart's item list and update it as the cart changes. At a configured threshold of \$50, a \$30 subtotal should show 60% progress and \$20 remaining. Exactly \$50 should qualify, subject to the carrier's other conditions.
 
-The implementation and Dispatch review are real. The customer-discovery scenarios and proposed operating and measurement workflows below explain how I would extend that work across the lifecycle.
+The implementation and Upsun Dispatch review are real. The customer-discovery scenarios and proposed operating and measurement workflows below explain how I would extend that work across the lifecycle.
 
 That request reaches into the storefront, cart, checkout, and admin application. It depends on which promotions apply, how the store calculates shipping, and what the application caches. A bar that promises free shipping while checkout adds a delivery charge has failed, even if the component looks exactly like the design.
 
@@ -173,29 +173,29 @@ Severity and confidence answer different questions. A possible checkout failure 
 
 <FactoryDiagram
   id="05-risk-finding"
-  alt={"A paraphrase of the tax warning in the Dispatch shipping-feature review. With a $50 threshold, a $45.45 subtotal before tax becomes $54.54 including tax. Under the reported tax-inclusive configuration, the carrier offers free shipping while the bar shows 90% and asks for another $4.55. The finding identifies the threshold calculation and related carrier logic. Severity, reported evidence, and the unresolved reproduction step remain distinct."}
-  caption={"Dispatch reports a tax-calculation mismatch and identifies the code paths behind it. The scenario still needs reproduction in the application."}
+  alt={"A paraphrase of the tax warning in the Upsun Dispatch shipping-feature review. With a $50 threshold, a $45.45 subtotal before tax becomes $54.54 including tax. Under the reported tax-inclusive configuration, the carrier offers free shipping while the bar shows 90% and asks for another $4.55. The finding identifies the threshold calculation and related carrier logic. Severity, reported evidence, and the unresolved reproduction step remain distinct."}
+  caption={"Upsun Dispatch reports a tax-calculation mismatch and identifies the code paths behind it. The scenario still needs reproduction in the application."}
 />
 
-### Dispatch's review of the real change
+<h3 id="dispatchs-review-of-the-real-change">Upsun Dispatch's review of the real change</h3>
 
 The proposed change adds the progress bar as a Magento module. It reuses the existing cart customer-data response and carrier settings. That keeps the proposed UI connected to an existing update mechanism instead of adding a separate request or another admin setting.
 
-The main Dispatch review records 13 files checked, one warning, three minor points, and one nitpick. It also records checks that supported the implementation, including the component's placement above the item list. This gives the engineer both concerns and work already examined.
+The main Upsun Dispatch review records 13 files checked, one warning, three minor points, and one nitpick. It also records checks that supported the implementation, including the component's placement above the item list. This gives the engineer both concerns and work already examined.
 
-The warning concerns tax. Dispatch traced a difference between the subtotal used by the bar and the amount compared by the shipping carrier. Its example uses a \$50 threshold with \$45.45 before tax and \$54.54 including tax. Under the tax-inclusive configuration described in the finding, the carrier offers free shipping while the bar reports 90% progress and asks for another \$4.55. The review links that disagreement to the relevant calculation and configuration paths.
+The warning concerns tax. Upsun Dispatch traced a difference between the subtotal used by the bar and the amount compared by the shipping carrier. Its example uses a \$50 threshold with \$45.45 before tax and \$54.54 including tax. Under the tax-inclusive configuration described in the finding, the carrier offers free shipping while the bar reports 90% progress and asks for another \$4.55. The review links that disagreement to the relevant calculation and configuration paths.
 
 That gives the senior engineer a specific case to investigate. Reproduce the two results under that store configuration, establish the correct rule, and make a regression check compare the bar with the carrier's decision. Those are the next actions I would want. They are not completed fixes in this record.
 
-Another finding concerns the boundary around an optional feature. The plugin adds progress data to the cart response through an unguarded call. Dispatch points out that an exception during later processing, such as currency formatting, could fail the whole cart section's load or refresh, affecting the item list, count, and subtotal along with the bar. The proposed correction is to contain the widget's failure.
+Another finding concerns the boundary around an optional feature. The plugin adds progress data to the cart response through an unguarded call. Upsun Dispatch points out that an exception during later processing, such as currency formatting, could fail the whole cart section's load or refresh, affecting the item list, count, and subtotal along with the bar. The proposed correction is to contain the widget's failure.
 
-Dispatch labels that concern minor. A senior engineer still has to assess its consequence in this application. The label helps route attention; the failure condition and affected behavior support the decision. I would want a failure-path check showing that the cart still loads when the optional progress calculation fails.
+Upsun Dispatch labels that concern minor. A senior engineer still has to assess its consequence in this application. The label helps route attention; the failure condition and affected behavior support the decision. I would want a failure-path check showing that the cart still loads when the optional progress calculation fails.
 
 The review also flags a success message shown for a destination the carrier excludes, and a numeric remaining amount in base currency beside a formatted amount in display currency. Each gives the engineer a different configuration to examine.
 
 <FactoryDiagram
   id="06-review-decisions"
-  alt={"The Dispatch review records 13 files checked, one warning, three minor points, and one nitpick. Two of four open threads are shown. The warning concerns tax eligibility. A minor finding concerns an optional widget exception failing the cart-section load or refresh. Proposed human investigation leads to correction only if the findings are confirmed. The change remains open on September 9, 2026, with all four threads unresolved."}
+  alt={"The Upsun Dispatch review records 13 files checked, one warning, three minor points, and one nitpick. Two of four open threads are shown. The warning concerns tax eligibility. A minor finding concerns an optional widget exception failing the cart-section load or refresh. Proposed human investigation leads to correction only if the findings are confirmed. The change remains open on September 9, 2026, with all four threads unresolved."}
 />
 
 
@@ -235,7 +235,7 @@ Keep checking the policy after adoption. Sample automatically accepted changes, 
 
 ### Validate against the real behavior
 
-The PR contains unit tests, but its description says they and Magento's dependency-injection compilation were not run because dependencies were unavailable. It reports syntax and file-format checks instead. The Dispatch review also notes the absence of a CI workflow and coverage gaps for the JavaScript component, layout integration, plugin wiring, and tax-inclusive calculation. Tests written and tests executed are different evidence.
+The PR contains unit tests, but its description says they and Magento's dependency-injection compilation were not run because dependencies were unavailable. It reports syntax and file-format checks instead. The Upsun Dispatch review also notes the absence of a CI workflow and coverage gaps for the JavaScript component, layout integration, plugin wiring, and tax-inclusive calculation. Tests written and tests executed are different evidence.
 
 A passing test would still answer only the question encoded in it. A component test supplied with `eligible: true` proves little about whether a real cart qualifies. Exercise the pricing and promotion rules that produce that value, then follow it through the cart and checkout.
 
@@ -547,7 +547,7 @@ Fund a complete workflow for it, including its owner and upkeep. Judge it by whe
 
 ## Sources and evidence
 
-This manifesto combines an observed implementation proposal and Dispatch review with illustrative discovery, operations, and product-strategy workflows. The actual issue requires an at-or-above threshold and reuse of existing carrier configuration. Tax, destination, and currency handling must follow that configuration. The customer scenarios and proposed experiments are not measured business results. The review snapshot is from September 9, 2026. Its findings remained open, and the Magento tests were not executed for this article. The diagrams paraphrase the review; proposed investigations and corrections are labeled separately.
+This manifesto combines an observed implementation proposal and Upsun Dispatch review with illustrative discovery, operations, and product-strategy workflows. The actual issue requires an at-or-above threshold and reuse of existing carrier configuration. Tax, destination, and currency handling must follow that configuration. The customer scenarios and proposed experiments are not measured business results. The review snapshot is from September 9, 2026. Its findings remained open, and the Magento tests were not executed for this article. The diagrams paraphrase the review; proposed investigations and corrections are labeled separately.
 
 - [Anthropic, Introducing Claude Opus 4.5](https://www.anthropic.com/news/claude-opus-4-5), November 24, 2025. Used for the release date, not a claim that all coding is solved.
 - [Anthropic, The AI-Native SDLC playbook](https://claude.com/blog/the-ai-native-sdlc-playbook), August 21, 2026. Related design guidance for artifacts, controls, and lifecycle feedback.

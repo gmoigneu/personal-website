@@ -79,7 +79,7 @@ export const factoryDiagrams: Record<string, FactoryDiagram> = {
   },
   '05-risk-finding': {
     title: 'What a useful risk finding contains',
-    intro: 'Dispatch shipping-feature review. Paraphrased scenario, not independently reproduced.',
+    intro: 'Upsun Dispatch shipping-feature review. Paraphrased scenario, not independently reproduced.',
     height: 990,
     cards: [
       { label: 'Agent prepares the finding · 01', title: 'Concern', lines: ["The bar's tax treatment differs from the carrier's rule."] },
@@ -95,20 +95,20 @@ export const factoryDiagrams: Record<string, FactoryDiagram> = {
   },
   '06-review-decisions': {
     title: 'One change, two concerns to investigate',
-    intro: 'Observed Dispatch findings. Human actions below are proposed, not recorded outcomes.',
+    intro: 'Observed Upsun Dispatch findings. Human actions below are proposed, not recorded outcomes.',
     height: 990,
     cards: [
-      { label: 'Dispatch · Shipping-feature review', title: '13 files reviewed', lines: ['1 warning · 3 minor points · 1 nitpick'] },
-      { label: 'Dispatch label · Warning', title: 'Tax rules diverge', lines: ['The carrier includes tax in this case. The progress bar excludes it.'] },
+      { label: 'Upsun Dispatch · Shipping-feature review', title: '13 files reviewed', lines: ['1 warning · 3 minor points · 1 nitpick'] },
+      { label: 'Upsun Dispatch label · Warning', title: 'Tax rules diverge', lines: ['The carrier includes tax in this case. The progress bar excludes it.'] },
       { label: 'Human · Proposed investigation', title: 'Investigate the tax rules', lines: ['Reproduce the tax-inclusive case.', 'Compare the bar with carrier rules.', 'Agree on the shared calculation.', 'If confirmed, align eligibility.', 'Test configured tax modes and limits.', 'Record checks for the revised change.'] },
-      { label: 'Dispatch label · Minor', title: 'Optional bar, wider failure', lines: ['An unguarded getData() exception can fail the whole cart section load.'] },
+      { label: 'Upsun Dispatch label · Minor', title: 'Optional bar, wider failure', lines: ['An unguarded getData() exception can fail the whole cart section load.'] },
       { label: 'Human · Proposed investigation', title: 'Investigate the failure', lines: ['Inject a post-quote getData() failure.', 'Check whether the cart section fails.', 'Choose an optional-feature fallback.', 'If confirmed, isolate the failure.', 'Keep cart data when the bar fails.', 'Add a regression for the exception.'] },
     ],
-    notes: ["Warning and Minor are Dispatch's labels. Two of four open threads are shown.", 'Snapshot, 9 September 2026. The change was open and all four review threads remained unresolved.'],
+    notes: ["Warning and Minor are Upsun Dispatch's labels. Two of four open threads are shown.", 'Snapshot, 9 September 2026. The change was open and all four review threads remained unresolved.'],
   },
   '07-revision-evidence': {
     title: 'Route the change according to risk',
-    intro: "Proposed policy. This is not a description of Dispatch or a replica of Meta's workflow.",
+    intro: "Proposed policy. This is not a description of Upsun Dispatch or a replica of Meta's workflow.",
     height: 1030,
     cards: [
       { label: 'Human · Approved policy', title: 'Define the policy', lines: ['Define eligibility, required checks, review owners, deadlines, and stop conditions.'] },
