@@ -1,13 +1,20 @@
 ---
 import { Image } from 'astro:assets';
+import type { MarkdownHeading } from 'astro';
 import type { CollectionEntry } from 'astro:content';
+import ArticleContents from '../components/ArticleContents.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
 
-type Props = CollectionEntry<'blog'>['data'] & { readingMinutes?: number };
+type Props = CollectionEntry<'blog'>['data'] & {
+	readingMinutes?: number;
+	headings?: MarkdownHeading[];
+};
 
-const { title, description, pubDate, updatedDate, heroImage, readingMinutes = 5 } = Astro.props;
+const { title, description, summary, pubDate, updatedDate, heroImage, readingMinutes = 5, headings = [] } = Astro.props;
+const sections = headings.filter((heading) => heading.depth === 2);
+const showContents = sections.length >= 3;
 
 function formatDate(date: Date) {
 	return date.toLocaleDateString('en-US', {
@@ -52,10 +59,10 @@ const readTime = `${readingMinutes} min read`;
 		<Navigation currentPage="blog" />
 
 		<!-- Article Container -->
-		<main class="flex-1 flex flex-col py-8 sm:py-12 md:py-20 px-4 sm:px-8 md:px-16">
-			<article class="max-w-[720px] flex flex-col gap-12">
+		<main class:list={['article-layout', { 'has-contents': showContents }]}>
+			<article class="article-content flex flex-col gap-12">
 				<!-- Article Header -->
-				<header class="flex flex-col gap-6">
+				<header class="reading-column flex flex-col gap-6">
 					<a href="/blog" class="font-body text-[13px] tracking-[0.5px] text-[var(--color-text-muted)] hover:text-[var(--color-text-secondary)]">
 						&larr; Back to Articles
 					</a>
@@ -74,7 +81,15 @@ const readTime = `${readingMinutes} min read`;
 							Updated on {formatDate(updatedDate)}
 						</p>
 					)}
+					{summary && <p class="article-summary">{summary}</p>}
 				</header>
+
+				{showContents && (
+					<details class="mobile-contents reading-column">
+						<summary>On this page</summary>
+						<ArticleContents headings={sections} />
+					</details>
+				)}
 
 				<!-- Hero Image -->
 				{heroImage && (
@@ -95,7 +110,7 @@ const readTime = `${readingMinutes} min read`;
 				</div>
 
 				<!-- Article Footer -->
-				<footer class="flex flex-col gap-8">
+				<footer class="reading-column flex flex-col gap-8">
 					<!-- Divider -->
 					<div class="h-px bg-[var(--color-divider)]"></div>
 
@@ -113,6 +128,14 @@ const readTime = `${readingMinutes} min read`;
 					</div>
 				</footer>
 			</article>
+			{showContents && (
+				<aside class="desktop-contents">
+					<div class="contents-sticky">
+						<p class="contents-title">On this page</p>
+						<ArticleContents headings={sections} />
+					</div>
+				</aside>
+			)}
 		</main>
 
 		<Footer />
@@ -155,3 +178,37 @@ const readTime = `${readingMinutes} min read`;
 		</script>
 	</body>
 </html>
+
+<style>
+	.article-layout {
+		flex: 1;
+		width: 100%;
+		max-width: 1280px;
+		margin-inline: auto;
+		padding: 2rem 1.25rem;
+	}
+	.article-content { min-width: 0; max-width: 900px; margin-inline: auto; }
+	.reading-column { width: 100%; max-width: 660px; margin-inline: auto; }
+	.article-summary { font-size: 1.125rem; line-height: 1.7; color: #333333; }
+	.mobile-contents { border-block: 1px solid var(--color-divider); padding-block: 1rem; }
+	.mobile-contents summary { cursor: pointer; font-weight: 600; color: var(--color-text-primary); }
+	.mobile-contents[open] summary { margin-bottom: 1rem; }
+	.mobile-contents summary:focus-visible { outline: 2px solid var(--color-link); outline-offset: 4px; }
+	.desktop-contents { display: none; }
+	@media (min-width: 640px) {
+		.article-layout { padding: 3rem 2rem; }
+		.article-summary { font-size: 1.25rem; }
+	}
+	@media (min-width: 1200px) {
+		.article-layout { padding-block: 5rem; }
+		.has-contents { display: grid; grid-template-columns: minmax(0, 900px) 224px; gap: 3rem; }
+		.mobile-contents { display: none; }
+		.desktop-contents { display: block; }
+		.contents-sticky { position: sticky; top: 2rem; max-height: calc(100dvh - 4rem); overflow-y: auto; padding: 4px; }
+		.contents-title { font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem; color: var(--color-text-primary); }
+	}
+	@media print {
+		.article-layout { display: block; padding: 0; }
+		.desktop-contents, .mobile-contents { display: none; }
+	}
+</style>

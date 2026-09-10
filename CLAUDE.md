@@ -22,6 +22,7 @@ This is an Astro 5 blog using the official blog template with MDX and sitemap in
 Blog posts live in `src/content/blog/` as Markdown or MDX files. The schema is defined in [src/content.config.ts](src/content.config.ts):
 - `title` (required): Post title
 - `description` (required): Post description for SEO
+- `summary` (optional): Short reader overview shown under article metadata
 - `pubDate` (required): Publication date
 - `updatedDate` (optional): Last update date
 - `heroImage` (optional): Hero image with automatic optimization
@@ -44,6 +45,12 @@ Blog posts live in `src/content/blog/` as Markdown or MDX files. The schema is d
 ### Styling
 
 Global styles in [src/styles/global.css](src/styles/global.css). Component-scoped styles use `<style>` blocks within `.astro` files.
+
+Articles use a 660 px reading column, 20 px desktop and 18 px mobile body text, and 1.7 line spacing. Figures may extend to 900 px. Main headings use Playfair Display; smaller headings use Inter. Article links use `--color-link` for sufficient contrast on the off-white background.
+
+The blog route passes rendered headings to the layout. Articles with at least three level-two headings get section navigation. Keep heading anchors stable when editing published articles. Optional summaries should state the argument before the reader starts the full text.
+
+The software factory article uses `FactoryDiagram.astro` for wide desktop images and readable mobile cards. Keep mobile diagram content consistent with the original SVG, including evidence limits and numerical examples.
 
 ### Color Palette
 

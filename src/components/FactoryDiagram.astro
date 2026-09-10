@@ -1,0 +1,149 @@
+---
+import { factoryDiagrams } from '../data/factory-diagrams';
+
+interface Props {
+  id: string;
+  alt: string;
+  caption?: string;
+}
+
+const { id, alt, caption } = Astro.props;
+const diagram = factoryDiagrams[id];
+if (!diagram) throw new Error(`Unknown factory diagram ${id}`);
+const imagePath = `/images/agentic-software-factory/${id}`;
+---
+
+<figure class="article-figure factory-diagram">
+  <a class="diagram-desktop" href={`${imagePath}.svg`} aria-label={`Enlarge diagram. ${alt}`}>
+    <img src={`${imagePath}.png`} alt={alt} width="1200" height={diagram.height} loading="lazy" decoding="async" />
+  </a>
+  <div class="diagram-mobile">
+    <p class="diagram-title"><strong>{diagram.title}</strong></p>
+    <p class="diagram-intro">{diagram.intro}</p>
+    <ul class="diagram-cards" role="list">
+      {diagram.cards.map((card) => (
+        <li class="diagram-card">
+          {card.label && <p class="card-label">{card.label}</p>}
+          <p class="card-title"><strong>{card.title}</strong></p>
+          {card.lines.map((line) => <p class="card-line">{line}</p>)}
+        </li>
+      ))}
+    </ul>
+    <div class="diagram-notes">
+      {diagram.notes.map((note) => <p>{note}</p>)}
+    </div>
+  </div>
+  <figcaption>
+    {caption && <span>{caption}</span>}
+    <a class="diagram-enlarge" href={`${imagePath}.svg`} aria-label={`Enlarge diagram. ${diagram.title}`}>Enlarge diagram</a>
+  </figcaption>
+</figure>
+
+<style>
+  .factory-diagram {
+    margin-block: 2.5rem;
+  }
+
+  .diagram-desktop {
+    display: block;
+    border: 0;
+  }
+
+  .diagram-desktop img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .diagram-mobile {
+    display: none;
+  }
+
+  figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .diagram-enlarge {
+    align-self: flex-start;
+    padding-block: 0.35rem;
+    text-underline-offset: 0.2em;
+  }
+
+  @media (max-width: 639px) {
+    .diagram-desktop {
+      display: none;
+    }
+
+    .diagram-mobile {
+      display: block;
+      font-family: var(--font-sans, 'Inter', sans-serif);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .diagram-title {
+      margin: 0 0 0.65rem;
+      font-size: 1.25rem;
+      line-height: 1.35;
+    }
+
+    .diagram-intro {
+      margin: 0 0 1rem;
+    }
+
+    .diagram-cards {
+      display: grid;
+      gap: 0.75rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .diagram-card {
+      margin: 0;
+      padding: 1rem;
+      border: 1px solid var(--color-divider, #e5e2dc);
+      border-left: 3px solid var(--color-accent-dark, #ad3c16);
+      border-radius: 0.25rem;
+      background: #fff;
+    }
+
+    .card-label {
+      margin: 0 0 0.35rem;
+      color: var(--color-text-secondary, #666);
+      font-size: 1rem;
+      line-height: 1.45;
+    }
+
+    .card-title {
+      margin: 0;
+      color: var(--color-text-primary, #1a1a1a);
+      font-size: 1.0625rem;
+      line-height: 1.4;
+    }
+
+    .card-line {
+      margin: 0.5rem 0 0;
+      font-size: 1rem;
+    }
+
+    .diagram-notes {
+      margin-top: 1rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--color-divider, #e5e2dc);
+    }
+
+    .diagram-notes p {
+      margin: 0.5rem 0 0;
+      font-size: 1rem;
+    }
+  }
+</style>
