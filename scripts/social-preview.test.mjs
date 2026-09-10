@@ -33,6 +33,8 @@ test('built pages publish valid branded cards and respect explicit overrides', a
 			'social-override-check': 'title: Custom preview\nsocialImage:\n  src: ../../assets/social-override.png\n  alt: A red test card\nheroImage: ../../assets/portrait.jpg',
 			'social-hero-check': 'title: A hero image must not become the social preview\nheroImage: ../../assets/portrait.jpg',
 			'social-title-check': 'title: A long article title that remains the page title\nsocialTitle: A shorter preview title',
+			'social-title-shared-check': 'title: Another article sharing a card title\nsocialTitle: A shorter preview title',
+			'social-override-shared-check': 'title: Another article sharing an override\nsocialImage:\n  src: ../../assets/social-override.png\n  alt: A red test card',
 			'social-long-check': `title: ${'A practical guide to building and operating reliable software with coding agents and clear human decisions across product discovery, validation, delivery, maintenance, and strategy'}`,
 		};
 		for (const [slug, frontmatter] of Object.entries(fixtures)) {
@@ -51,7 +53,6 @@ test('built pages publish valid branded cards and respect explicit overrides', a
 		const home = metadata(await readFile(path.join(dist, 'index.html'), 'utf8'));
 		assert.match(home.get('og:image'), /^https:\/\/guillaume\.id\/social\/home-[a-f0-9]+\.png$/);
 		assert.ok(home.get('og:image:alt').includes('Guillaume Moigneu'));
-		const articleImages = new Set();
 		const pages = ['index.html', 'blog/index.html', 'whoami/index.html', 'talks/index.html', 'publications/index.html'];
 		for (const entry of await readdir(path.join(dist, 'blog'), { withFileTypes: true })) {
 			if (entry.isDirectory()) pages.push(`blog/${entry.name}/index.html`);
@@ -74,8 +75,6 @@ test('built pages publish valid branded cards and respect explicit overrides', a
 			assert.equal(meta.get('og:image:type'), `image/${image.format}`, page);
 			if (meta.get('og:type') === 'article') {
 				assert.notEqual(imageURL.href, home.get('og:image'), page);
-				assert.ok(!articleImages.has(imageURL.href), `Distinct titles need distinct cards. ${page}`);
-				articleImages.add(imageURL.href);
 				assert.ok(html.includes(`"image":"${imageURL.href}"`), `Article structured data must agree. ${page}`);
 			} else {
 				assert.equal(imageURL.href, home.get('og:image'), page);
@@ -97,6 +96,13 @@ test('built pages publish valid branded cards and respect explicit overrides', a
 		const shorter = metadata(await readFile(path.join(dist, 'blog/social-title-check/index.html'), 'utf8'));
 		assert.equal(shorter.get('og:title'), 'A long article title that remains the page title');
 		assert.match(shorter.get('og:image:alt'), /^A shorter preview title\./);
+		const sharedTitle = metadata(await readFile(path.join(dist, 'blog/social-title-shared-check/index.html'), 'utf8'));
+		assert.equal(sharedTitle.get('og:image'), shorter.get('og:image'), 'Shared display titles reuse their generated card.');
+		const sharedOverride = metadata(await readFile(path.join(dist, 'blog/social-override-shared-check/index.html'), 'utf8'));
+		assert.equal(sharedOverride.get('og:image'), override.get('og:image'), 'Articles may reuse an explicit image.');
+		const longTitle = metadata(await readFile(path.join(dist, 'blog/social-long-check/index.html'), 'utf8'));
+		assert.equal(new Set([shorter, metadata(heroHTML), longTitle].map((meta) => meta.get('og:image'))).size, 3,
+			'Distinct generated display titles have distinct cards.');
 	} finally {
 		await rm(temporary, { recursive: true, force: true });
 	}
