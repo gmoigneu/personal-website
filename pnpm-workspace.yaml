@@ -1,3 +1,7 @@
+overrides:
+  # Satori pins 0.7.3; use its security-patched release (GHSA-px8p-9vwx-vf98).
+  'fflate@<0.7.5': ^0.7.5
+
 allowBuilds:
   esbuild: true
   sharp: true

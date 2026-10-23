@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Development Commands
 
-Prerequisites: `nvm use 24`
+Prerequisites: `nvm install && nvm use` (reads `.nvmrc`). Use the pnpm version pinned in `package.json`.
 
 ```bash
 pnpm dev          # Start dev server at localhost:4321
@@ -16,7 +16,7 @@ pnpm test         # Build isolated fixtures and verify social previews
 
 ## Architecture
 
-This is an Astro 5 blog using the official blog template with MDX and sitemap integrations.
+This is an Astro 7 blog using the official blog template with MDX and sitemap integrations.
 
 ### Content Collections
 

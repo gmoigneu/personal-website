@@ -42,6 +42,10 @@ Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
+Use Node.js 26.12.1 (pinned in `.nvmrc`) and pnpm 12.15.0 (pinned in `package.json`). With nvm installed, run `nvm install` and `nvm use` from the project root. Install the pinned package manager with `npm install --global pnpm@12.15.0` if needed.
+
+TypeScript stays on the latest 6.x release because `@astrojs/check` does not yet support TypeScript 7. The `fflate` override in `pnpm-workspace.yaml` patches Satori's pinned dependency for GHSA-px8p-9vwx-vf98; remove it when upstream no longer needs it.
+
 All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |

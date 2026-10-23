@@ -4,6 +4,7 @@ import { cp, mkdtemp, readFile, readdir, rm, symlink, writeFile } from 'node:fs/
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
+import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
 function metadata(html) {
@@ -40,8 +41,15 @@ test('built pages publish valid branded cards and respect explicit overrides', a
 		for (const [slug, frontmatter] of Object.entries(fixtures)) {
 			await writeFile(path.join(temporary, `src/content/blog/${slug}.md`), `---\n${frontmatter}\ndescription: Social preview integration check\npubDate: 2026-09-10T12:00:00Z\n---\n\nArticle body stays visible.\n`);
 		}
+		for (const extension of ['md', 'mdx']) {
+			await writeFile(path.join(temporary, `src/content/blog/heading-collision-${extension}.${extension}`),
+				'---\ntitle: Heading collision check\ndescription: Stable unique anchors\npubDate: 2026-09-10\n---\n\n## Topic 🚀\n\nFirst section.\n\n## Topic\n\nSecond section.\n\n## Final section\n\nLast section.\n');
+		}
+		const astroPackageURL = import.meta.resolve('astro/package.json');
+		const astroPackage = JSON.parse(await readFile(new URL(astroPackageURL), 'utf8'));
+		const astroCLI = fileURLToPath(new URL(astroPackage.bin.astro, astroPackageURL));
 		try {
-			execFileSync(process.execPath, [path.join(root, 'node_modules/astro/astro.js'), 'build'], {
+			execFileSync(process.execPath, [astroCLI, 'build'], {
 				cwd: temporary,
 				env: { ...process.env, ASTRO_TELEMETRY_DISABLED: '1' },
 				stdio: 'pipe',
@@ -85,6 +93,20 @@ test('built pages publish valid branded cards and respect explicit overrides', a
 				assert.equal(image.format, 'png', page);
 			}
 		}
+		for (const extension of ['md', 'mdx']) {
+			const html = await readFile(path.join(dist, `blog/heading-collision-${extension}/index.html`), 'utf8');
+			assert.deepEqual([...html.matchAll(/<h2\b[^>]*\bid="([^"]+)"/g)].map((match) => match[1]),
+				['topic', 'topic-1', 'final-section'], `${extension} headings have unique normalized IDs`);
+			for (const anchor of ['topic', 'topic-1', 'final-section']) {
+				assert.ok(html.includes(`href="#${anchor}"`), `${extension} navigation targets ${anchor}`);
+			}
+		}
+		const publishedHTML = await readFile(path.join(dist,
+			'blog/setting-up-a-rock-solid-typescript-react-project-with-eslint-and-prettier/index.html'), 'utf8');
+		for (const anchor of ['git-hooks-your-code-quality-bouncer', 'pro-tips']) {
+			assert.ok(publishedHTML.includes(`id="${anchor}"`), `Published heading anchor stays stable: ${anchor}`);
+			assert.ok(publishedHTML.includes(`href="#${anchor}"`), `Section navigation uses the stable anchor: ${anchor}`);
+		}
 		const overrideHTML = await readFile(path.join(dist, 'blog/social-override-check/index.html'), 'utf8');
 		const override = metadata(overrideHTML);
 		assert.match(override.get('og:image'), /social-override/);
@@ -103,6 +125,19 @@ test('built pages publish valid branded cards and respect explicit overrides', a
 		const longTitle = metadata(await readFile(path.join(dist, 'blog/social-long-check/index.html'), 'utf8'));
 		assert.equal(new Set([shorter, metadata(heroHTML), longTitle].map((meta) => meta.get('og:image'))).size, 3,
 			'Distinct generated display titles have distinct cards.');
+		for (const [src, message] of [
+			['https://example.com/card.png', 'Use a relative path to a local social image.'],
+			['../../assets/card.svg', 'Social images must use PNG or JPEG.'],
+		]) {
+			await writeFile(path.join(temporary, 'src/content/blog/social-invalid-check.md'),
+				`---\ntitle: Invalid social image\ndescription: Validation regression check\npubDate: 2026-09-10\nsocialImage:\n  src: ${src}\n  alt: Invalid card\n---\n`);
+			assert.throws(() => execFileSync(process.execPath, [astroCLI, 'build'], {
+				cwd: temporary,
+				env: { ...process.env, ASTRO_TELEMETRY_DISABLED: '1' },
+				stdio: 'pipe',
+			}), (error) => `${error.stdout}\n${error.stderr}`.includes(message),
+			`Reject invalid social image: ${src}`);
+		}
 	} finally {
 		await rm(temporary, { recursive: true, force: true });
 	}

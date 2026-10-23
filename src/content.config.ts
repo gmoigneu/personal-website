@@ -1,4 +1,5 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
 
 const blog = defineCollection({
@@ -12,9 +13,16 @@ const blog = defineCollection({
 			summary: z.string().optional(),
 			socialTitle: z.string().trim().min(1).max(180).optional(),
 			socialImage: z.object({
-				src: z.string().regex(/\.(png|jpe?g)$/i, 'Social images must use PNG or JPEG.')
-					.refine((value) => value.startsWith('./') || value.startsWith('../'), 'Use a relative path to a local social image.')
-					.pipe(image()),
+				src: z.preprocess((value, ctx) => {
+					const result = z.string().regex(/\.(png|jpe?g)$/i, 'Social images must use PNG or JPEG.')
+						.refine((path) => path.startsWith('./') || path.startsWith('../'), 'Use a relative path to a local social image.')
+						.safeParse(value);
+					if (!result.success) {
+						for (const issue of result.error.issues) ctx.addIssue({ code: 'custom', message: issue.message });
+						return z.NEVER;
+					}
+					return result.data;
+				}, image()),
 				alt: z.string().trim().min(1),
 			}).optional(),
 			// Transform string to Date object
@@ -32,9 +40,9 @@ const talks = defineCollection({
 			conference: z.string(),
 			date: z.coerce.date(),
 			status: z.enum(['upcoming', 'past']),
-			conferenceUrl: z.string().url().optional(),
+			conferenceUrl: z.url().optional(),
 			slidesUrl: z.string().optional(),
-			videoUrl: z.string().url().optional(),
+			videoUrl: z.url().optional(),
 			heroImage: image().optional(),
 		}),
 });
@@ -46,7 +54,7 @@ const publications = defineCollection({
 		description: z.string(),
 		source: z.string(),
 		pubDate: z.coerce.date(),
-		url: z.string().url(),
+		url: z.url(),
 		featured: z.boolean().default(false),
 	}),
 });
